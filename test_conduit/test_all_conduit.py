@@ -97,10 +97,7 @@ class TestConduit1(object):
     # #TC5 modifying blogpost, removing and adding new tag
     #     def test_modify_article(self):
     #         self.test_sign_in()
-    #         # title = "Piros cipellők"
-    #         # about = "mese"
-    #         # write = "-A mindenit!- mondta-, micsoda csodás tánccipők!"
-    #         # tag = "mese"
+
     #         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
     #         time.sleep(5)
     #         sajat_cikk= self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
@@ -256,8 +253,15 @@ class TestConduit1(object):
 
     # T12 logout'
     def test_logout(self):
-        conduit_registration(self.driver)
+        # conduit_registration(self.driver)
         # conduit_signin(self.driver)
+        self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+        self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+        self.driver.implicitly_wait(8)
+        self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
         time.sleep(4)
         self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
         time.sleep(2)

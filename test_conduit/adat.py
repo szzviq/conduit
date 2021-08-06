@@ -13,9 +13,9 @@ from datetime import datetime
 now = datetime.now()
 act_time = now.strftime("%H%M")
 # mail = f'szzviq{act_time}@gmail.com'
-mail_1 = "testuser_3@ghail.com"
+mail_1 = "testuser_6@ghail.com"
 # bad_password = 'nemjo'
-username = 'User_new3'
+username = 'User_new6'
 password = 'Valami12'
 
 #signin data
@@ -45,14 +45,15 @@ tag = "mese"
 # tag_mod = "vers"
 
 
-def conduit_registration(driver):
-    driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
-    driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
-    driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-    driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-    time.sleep(2)
-    driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+# def conduit_registration(driver):
+#     driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
+#     driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
+#     driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+#     driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+#     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+#     time.sleep(2)
+#     driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+#     return driver
 
 # def conduit_signin(driver):
 #     driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
