@@ -9,14 +9,14 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a4ebd7d1cc86d979",
-      "reportUrl" : "https://szzviq.github.io/conduit/31//#testresult/a4ebd7d1cc86d979",
+      "uid" : "1a1abfe9ddab8572",
+      "reportUrl" : "https://szzviq.github.io/conduit/31//#testresult/1a1abfe9ddab8572",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(text(),\"Log out\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
       "time" : {
-        "start" : 1628270383413,
-        "stop" : 1628270402306,
-        "duration" : 18893
+        "start" : 1628270848238,
+        "stop" : 1628270867163,
+        "duration" : 18925
       }
     } ]
   },
@@ -30,34 +30,33 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "cc78a8c71cddfb0",
-      "reportUrl" : "https://szzviq.github.io/conduit/31//#testresult/cc78a8c71cddfb0",
+      "uid" : "6aa403d37306073c",
+      "reportUrl" : "https://szzviq.github.io/conduit/31//#testresult/6aa403d37306073c",
       "status" : "passed",
       "time" : {
-        "start" : 1628270377064,
-        "stop" : 1628270379160,
-        "duration" : 2096
+        "start" : 1628270839018,
+        "stop" : 1628270841105,
+        "duration" : 2087
       }
     } ]
   },
   "bfb577fd92079a3bd7f073a6ebe3bfe4" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "77c8a450cc576100",
-      "reportUrl" : "https://szzviq.github.io/conduit/31//#testresult/77c8a450cc576100",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: assert '' == 'Welcome!'\n  - Welcome!",
+      "uid" : "2c7b3b7a79f67bcb",
+      "reportUrl" : "https://szzviq.github.io/conduit/31//#testresult/2c7b3b7a79f67bcb",
+      "status" : "passed",
       "time" : {
-        "start" : 1628270380621,
-        "stop" : 1628270382856,
-        "duration" : 2235
+        "start" : 1628270842738,
+        "stop" : 1628270847620,
+        "duration" : 4882
       }
     } ]
   }

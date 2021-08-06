@@ -1,39 +1,18 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Product defects",
-    "children" : [ {
-      "name" : "AssertionError: assert '' == 'Welcome!'\n  - Welcome!",
-      "children" : [ {
-        "name" : "test_signup",
-        "uid" : "77c8a450cc576100",
-        "parentUid" : "6f3379886b2a955961fe4fcfcc38a573",
-        "status" : "failed",
-        "time" : {
-          "start" : 1628270380621,
-          "stop" : 1628270382856,
-          "duration" : 2235
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "6f3379886b2a955961fe4fcfcc38a573"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  }, {
     "name" : "Test defects",
     "children" : [ {
       "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(text(),\"Log out\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
       "children" : [ {
         "name" : "test_logout",
-        "uid" : "a4ebd7d1cc86d979",
+        "uid" : "1a1abfe9ddab8572",
         "parentUid" : "ac6c817c4caf36a2701bdc48171b81e5",
         "status" : "broken",
         "time" : {
-          "start" : 1628270383413,
-          "stop" : 1628270402306,
-          "duration" : 18893
+          "start" : 1628270848238,
+          "stop" : 1628270867163,
+          "duration" : 18925
         },
         "flaky" : false,
         "newFailed" : false,
