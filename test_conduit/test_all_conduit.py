@@ -56,7 +56,7 @@ class TestConduit1(object):
 
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         self.driver.implicitly_wait(8)
@@ -74,7 +74,7 @@ class TestConduit1(object):
         #self.test_accept_cookies()
        
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(dummy_mail)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         time.sleep(5)
