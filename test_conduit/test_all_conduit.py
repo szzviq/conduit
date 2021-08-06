@@ -258,7 +258,7 @@ class TestConduit1(object):
     def test_logout(self):
         conduit_registration(self.driver)
         # conduit_signin(self.driver)
-        time.sleep(2)
+        time.sleep(4)
         self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
         time.sleep(2)
         navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
