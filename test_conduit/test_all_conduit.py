@@ -48,6 +48,7 @@ class TestConduit1(object):
     #         #positive
     def test_signup(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
+        time.sleep(2)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
