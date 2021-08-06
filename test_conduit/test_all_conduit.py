@@ -25,7 +25,10 @@ class TestConduit1(object):
 
 #TC1 accepting cookies
     def test_accept_cookies(self):
-        assert True
+        self.driver.find_element_by_xpath('//button[contains(@class, "accept")]').click()
+        time.sleep(2)
+        after_accept = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
+        assert after_accept['value'] == 'accept'
 
 # #TC2 registration
 #     #negative with too simple password
