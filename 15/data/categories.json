@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "NameError: name 'mail' is not defined",
+      "children" : [ {
+        "name" : "test_signup",
+        "uid" : "e23960ea8f132935",
+        "parentUid" : "cf3240b2de3107b7a7a13ec068211f9b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628249742596,
+          "stop" : 1628249744858,
+          "duration" : 2262
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cf3240b2de3107b7a7a13ec068211f9b"
+    }, {
+      "name" : "NameError: name 'dummy_mail' is not defined",
+      "children" : [ {
+        "name" : "test_sign_in",
+        "uid" : "cd52f59edf04fe7",
+        "parentUid" : "8e3e7d92977da8818695733cfe0bf259",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628249746578,
+          "stop" : 1628249746669,
+          "duration" : 91
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8e3e7d92977da8818695733cfe0bf259"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
