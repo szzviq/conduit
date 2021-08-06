@@ -260,7 +260,7 @@ class TestConduit1(object):
 
     # T11 list_faved_items
 
-    # T12 logout
+    # T12 logout'
     def test_logout(self):
         conduit_registration(self.driver)
         self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
