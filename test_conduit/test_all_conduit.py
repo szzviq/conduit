@@ -6,19 +6,13 @@ import time
 from adat import *
 
 
-# def signin(browser,mailcim,password):
-#     browser.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-#     browser.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mailcim)
-#     browser.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-#     browser.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-#     time.sleep(5)
-#     return browser
+
 
 
 class TestConduit1(object):
     def setup(self):
         browser_options = Options()
-        browser_options.headless = True
+        browser_options.headless = False
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
         self.driver.get("http://localhost:1667/#/")
 
@@ -262,8 +256,9 @@ class TestConduit1(object):
 
     # T12 logout'
     def test_logout(self):
-        conduit_registration(self.driver)
+        conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
+        time.sleep(2)
         navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
         assert navbar_osszes[-1].text == "Sign up"

@@ -13,9 +13,9 @@ from datetime import datetime
 now = datetime.now()
 act_time = now.strftime("%H%M")
 # mail = f'szzviq{act_time}@gmail.com'
-mail_1 = "testuser_1@ghail.com"
+mail_1 = "testuser_3@ghail.com"
 # bad_password = 'nemjo'
-username = 'User_new1754'
+username = 'User_new3'
 password = 'Valami12'
 
 #signin data
@@ -53,3 +53,11 @@ def conduit_registration(driver):
     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
     time.sleep(2)
     driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+
+def conduit_signin(driver):
+    driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+    time.sleep(2)
+    driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+#
