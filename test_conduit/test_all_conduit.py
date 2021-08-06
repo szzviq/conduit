@@ -52,19 +52,19 @@ class TestConduit1(object):
     #         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
     #         #positive
-    # def test_signup(self):
-    #     self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
-    #     self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-    #     self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
-    #     self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-    #     self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-    #     self.driver.implicitly_wait(8)
-    #     alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
-    #     alert_subtext = self.driver.find_element_by_xpath('//div[@class="swal-text"]')
-    #     success = "Welcome!"
-    #     self.driver.implicitly_wait(2)
-    #     assert alert_text.text == success
-    #     self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+    def test_signup(self):
+        self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+        self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+        self.driver.implicitly_wait(8)
+        alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
+        alert_subtext = self.driver.find_element_by_xpath('//div[@class="swal-text"]')
+        success = "Welcome!"
+        self.driver.implicitly_wait(2)
+        assert alert_text.text == success
+        self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
     # #TC3 signin
     # def test_sign_in(self):
