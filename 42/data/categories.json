@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert '' == 'Welcome!'\n  - Welcome!",
+      "children" : [ {
+        "name" : "test_signup",
+        "uid" : "5d2aa012d9bd7f65",
+        "parentUid" : "6f3379886b2a955961fe4fcfcc38a573",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628284338521,
+          "stop" : 1628284342625,
+          "duration" : 4104
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f3379886b2a955961fe4fcfcc38a573"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: '../article.csv'",
+      "children" : [ {
+        "name" : "test_new_article_from_file",
+        "uid" : "d72178f6ea778e",
+        "parentUid" : "860b99782c3ef3d5b606aa29802bda90",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628284369486,
+          "stop" : 1628284376783,
+          "duration" : 7297
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "860b99782c3ef3d5b606aa29802bda90"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
