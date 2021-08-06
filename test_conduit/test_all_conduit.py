@@ -152,7 +152,7 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(sor[3])
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
-        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(7)
         cikkek_szama_iras_utan=len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert cikkek_szama_iras_utan ==cikkek_szama + 6
@@ -202,22 +202,22 @@ class TestConduit1(object):
     #         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
     #TC7 deleting articles
-        def test_delete_article(self):
-            conduit_registration(self.driver)
-            conduit_signin(self.driver)
-            conduit_new_article(self.driver)
-            time.sleep(2)
-            self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
-            time.sleep(5)
-            sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-            torles_elott=len(sajat_cikk)
-            sajat_cikk[-1].click()
-            self.driver.implicitly_wait(2)
-            self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
-            self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
-            time.sleep(5)
-            torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
-            assert torles_elott != torles_utan
+    def test_delete_article(self):
+        conduit_registration(self.driver)
+        conduit_signin(self.driver)
+        conduit_new_article(self.driver)
+        time.sleep(2)
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
+        time.sleep(5)
+        sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        torles_elott=len(sajat_cikk)
+        sajat_cikk[-1].click()
+        self.driver.implicitly_wait(2)
+        self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
+        time.sleep(5)
+        torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
+        assert torles_elott != torles_utan
 
 
 
