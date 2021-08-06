@@ -55,6 +55,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         self.driver.implicitly_wait(8)
         alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
+        print(alert_text)
         success = "Welcome!"
         time.sleep(4)
         assert alert_text.text == success
@@ -140,7 +141,7 @@ class TestConduit1(object):
         sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         cikkek_szama=len(sajat_cikk2)
         self.driver.implicitly_wait(4)
-        with open('../article.csv', 'r', encoding="utf-8") as csv_in:  # mit nyitunk meg, milyen változó néveel
+        with open('article.csv', 'r', encoding="utf-8") as csv_in:  # mit nyitunk meg, milyen változó néveel
             csv_reader = csv.reader(csv_in, delimiter=',')  # mi a file és mi az elválasztó
             next(csv_reader)
             for row in csv_reader:
