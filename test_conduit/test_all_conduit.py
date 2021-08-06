@@ -133,7 +133,7 @@ class TestConduit1(object):
     def test_new_article_from_file(self):
         conduit_registration(self.driver)
         conduit_signin(self.driver)
-        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(5)
         sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         cikkek_szama=len(sajat_cikk2)
@@ -206,6 +206,7 @@ class TestConduit1(object):
     def test_delete_article(self):
         conduit_registration(self.driver)
         conduit_signin(self.driver)
+        time.sleep(1)
         conduit_new_article(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
@@ -215,7 +216,7 @@ class TestConduit1(object):
         sajat_cikk[-1].click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
-        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(5)
         torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert torles_elott != torles_utan

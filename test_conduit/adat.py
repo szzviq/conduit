@@ -52,7 +52,7 @@ def conduit_registration(driver):
     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
     time.sleep(2)
     driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-    time.sleep(3)
+    time.sleep(5)
 #
 
 def conduit_signin(driver):
