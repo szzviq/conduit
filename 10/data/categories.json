@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "NameError: name 'username' is not defined",
+      "children" : [ {
+        "name" : "test_signup",
+        "uid" : "d35836bcedbcb31f",
+        "parentUid" : "114d67585a11ee160e6cc138cb3a658e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628243334523,
+          "stop" : 1628243336715,
+          "duration" : 2192
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "114d67585a11ee160e6cc138cb3a658e"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
