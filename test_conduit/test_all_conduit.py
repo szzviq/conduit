@@ -245,17 +245,18 @@ class TestConduit1(object):
     #             self.driver.execute_script("window.history.go(-1)")
     #             time.sleep(2)
 
-    # #TC10 Pagination
-    #     def test_pagination(self):
-    #         self.test_sign_in()
-    #         lapozo_oldalak = self.driver.find_elements_by_xpath('//ul[@class="pagination"]/li/a')
-    #         last_number=lapozo_oldalak[-1].text
-    #         assert (len(lapozo_oldalak) > 0)
-    #         for oldal in lapozo_oldalak:
-    #             oldal.click()
-    #             time.sleep(3)
-    #             continue
-    #         assert len(lapozo_oldalak) == int(last_number)
+#TC10 Pagination
+    def test_pagination(self):
+        conduit_signin(self.driver)
+        time.sleep(2)
+        lapozo_oldalak = self.driver.find_elements_by_xpath('//ul[@class="pagination"]/li/a')
+        last_number=lapozo_oldalak[-1].text
+        assert (len(lapozo_oldalak) > 0)
+        for oldal in lapozo_oldalak:
+            oldal.click()
+            time.sleep(3)
+            continue
+        assert len(lapozo_oldalak) == int(last_number)
 
     # T11 list_faved_items
 
