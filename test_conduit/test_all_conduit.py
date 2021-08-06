@@ -77,7 +77,7 @@ class TestConduit1(object):
 
     # TC4 creating new blogpost
     def test_new_article(self):
-        conduit_registration(self.driver)
+        #conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
@@ -132,7 +132,7 @@ class TestConduit1(object):
     # #TC5 Writing blogposts from file
 
     def test_new_article_from_file(self):
-        conduit_registration(self.driver)
+        #conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
@@ -140,7 +140,7 @@ class TestConduit1(object):
         sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         cikkek_szama=len(sajat_cikk2)
         self.driver.implicitly_wait(4)
-        with open('article.csv', 'r', encoding="utf-8") as csv_in:  # mit nyitunk meg, milyen változó néveel
+        with open('../article.csv', 'r', encoding="utf-8") as csv_in:  # mit nyitunk meg, milyen változó néveel
             csv_reader = csv.reader(csv_in, delimiter=',')  # mi a file és mi az elválasztó
             next(csv_reader)
             for row in csv_reader:
@@ -206,7 +206,7 @@ class TestConduit1(object):
 
     #TC7 deleting articles
     def test_delete_article(self):
-        conduit_registration(self.driver)
+        #conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(1)
         conduit_new_article(self.driver)
