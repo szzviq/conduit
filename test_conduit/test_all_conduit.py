@@ -60,7 +60,6 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         self.driver.implicitly_wait(8)
         alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
-        alert_subtext = self.driver.find_element_by_xpath('//div[@class="swal-text"]')
         success = "Welcome!"
         self.driver.implicitly_wait(2)
         assert alert_text.text == success
@@ -261,8 +260,8 @@ class TestConduit1(object):
     # T11 list_faved_items
 
     # T12 logout'
-    # def test_logout(self):
-    #     conduit_registration(self.driver)
-    #     self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
-    #     navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
-    #     assert navbar_osszes[-1].text == "Sign up"
+    def test_logout(self):
+        conduit_registration(self.driver)
+        self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
+        navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
+        assert navbar_osszes[-1].text == "Sign up"
