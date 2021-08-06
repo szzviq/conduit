@@ -15,7 +15,7 @@ import csv
 now = datetime.now()
 act_time = now.strftime("%H%M")
 mail = f'szzviq{act_time}@gmail.com'
-reg_mail = copy(mail)
+#reg_mail = copy(mail)
 dummy_mail ='szzviq1754@gmail.com'
 bad_password = 'nemjo'
 password = 'Valami12'
