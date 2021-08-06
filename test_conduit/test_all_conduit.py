@@ -167,8 +167,8 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').clear()
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mod_mail)
 
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').clear()
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(mod_password)
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').clear()
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(mod_password)
         self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
