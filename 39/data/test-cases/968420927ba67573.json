@@ -1,0 +1,86 @@
+{
+  "uid" : "968420927ba67573",
+  "name" : "test_signup",
+  "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_signup",
+  "historyId" : "bfb577fd92079a3bd7f073a6ebe3bfe4",
+  "time" : {
+    "start" : 1628282520709,
+    "stop" : 1628282523295,
+    "duration" : 2586
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '' == 'Welcome!'\n  - Welcome!",
+  "statusTrace" : "self = <test_all_conduit.TestConduit1 object at 0x7f01221b4130>\n\n    def test_signup(self):\n        self.driver.find_element_by_xpath('//a[contains(text(),\"Sign up\")]').click()\n        self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Username\")]').send_keys(username)\n        self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Email\")]').send_keys(mail_1)\n        self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Password\")]').send_keys(password)\n        self.driver.find_element_by_xpath('//button[contains(@class,\"pull-xs\")]').click()\n        self.driver.implicitly_wait(8)\n        alert_text = self.driver.find_element_by_xpath('//div[@class=\"swal-title\"]')\n        success = \"Welcome!\"\n        self.driver.implicitly_wait(4)\n>       assert alert_text.text == success\nE       AssertionError: assert '' == 'Welcome!'\nE         - Welcome!\n\ntest_conduit/test_all_conduit.py:59: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '' == 'Welcome!'\n  - Welcome!",
+    "statusTrace" : "self = <test_all_conduit.TestConduit1 object at 0x7f01221b4130>\n\n    def test_signup(self):\n        self.driver.find_element_by_xpath('//a[contains(text(),\"Sign up\")]').click()\n        self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Username\")]').send_keys(username)\n        self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Email\")]').send_keys(mail_1)\n        self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Password\")]').send_keys(password)\n        self.driver.find_element_by_xpath('//button[contains(@class,\"pull-xs\")]').click()\n        self.driver.implicitly_wait(8)\n        alert_text = self.driver.find_element_by_xpath('//div[@class=\"swal-title\"]')\n        success = \"Welcome!\"\n        self.driver.implicitly_wait(4)\n>       assert alert_text.text == success\nE       AssertionError: assert '' == 'Welcome!'\nE         - Welcome!\n\ntest_conduit/test_all_conduit.py:59: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d70ebd3a601a3e5e",
+      "name" : "log",
+      "source" : "d70ebd3a601a3e5e.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "f157ff9900d54418",
+      "name" : "stderr",
+      "source" : "f157ff9900d54418.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "suite",
+    "value" : "test_all_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit1"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-224"
+  }, {
+    "name" : "thread",
+    "value" : "3880-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_conduit.test_all_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "968420927ba67573.json",
+  "parameterValues" : [ ]
+}
