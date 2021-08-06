@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'article.csv'",
+      "children" : [ {
+        "name" : "test_new_article_from_file",
+        "uid" : "d594b95ace89655c",
+        "parentUid" : "2cbce7b5bc8433aa5a2e94f96e961c93",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628283708180,
+          "stop" : 1628283724947,
+          "duration" : 16767
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2cbce7b5bc8433aa5a2e94f96e961c93"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
