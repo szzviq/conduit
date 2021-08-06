@@ -5,8 +5,7 @@
 # import time
 import time
 from datetime import datetime
-
-# import csv
+import csv
 
 #
 #signup data
