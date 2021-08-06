@@ -66,8 +66,7 @@ class TestConduit1(object):
         self.driver.implicitly_wait(2)
         assert alert_text.text == success
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-        #save the mail parameter
-        self.driver.find_element_by_xpath('//a[@href="#/settings"]').click()
+        
 
 
 # #TC3 signin
