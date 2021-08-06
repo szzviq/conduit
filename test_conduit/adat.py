@@ -3,20 +3,21 @@
 # from selenium.webdriver.support.wait import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
 # import time
-from datetime import datetime
+# from datetime import datetime
 # # import pyperclip
 # import csv
 # # import ctypes
 #
 #signup data
-now = datetime.now()
-act_time = now.strftime("%H%M")
-mail = f'szzviq{act_time}@gmail.com'
+# now = datetime.now()
+# act_time = now.strftime("%H%M")
+# mail = f'szzviq{act_time}@gmail.com'
+mail_1 = "testuser_1@ghail.com"
 # bad_password = 'nemjo'
 username = 'User_new1754'
 password = 'Valami12'
 #signin data
-dummy_mail ='szzviq1754@gmail.com'
+#dummy_mail ='szzviq1754@gmail.com'
 # mail_for_mod_profile='nulltunder@ghail.com'
 
 #data for profile modification
