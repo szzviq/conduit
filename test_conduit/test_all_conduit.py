@@ -262,7 +262,8 @@ class TestConduit1(object):
         self.driver.implicitly_wait(8)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
         time.sleep(6)
-        self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
+        logout_btn=self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
+        logout_btn.click()
         time.sleep(2)
         navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
         assert navbar_osszes[-1].text == "Sign up"
