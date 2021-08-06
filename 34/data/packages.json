@@ -1,0 +1,74 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "test_conduit.test_all_conduit",
+    "children" : [ {
+      "name" : "test_accept_cookies",
+      "uid" : "41d6a39de15bfed2",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628279187948,
+        "stop" : 1628279190034,
+        "duration" : 2086
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_signup",
+      "uid" : "dc6f84995f133480",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "failed",
+      "time" : {
+        "start" : 1628279191575,
+        "stop" : 1628279194103,
+        "duration" : 2528
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_sign_in",
+      "uid" : "26d6ea4314ee64cc",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628279195793,
+        "stop" : 1628279203522,
+        "duration" : 7729
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_new_article",
+      "uid" : "44f80f2411d07ca9",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628279205067,
+        "stop" : 1628279215365,
+        "duration" : 10298
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_logout",
+      "uid" : "f9b0afb88bda2e0e",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628279216890,
+        "stop" : 1628279229673,
+        "duration" : 12783
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_conduit.test_all_conduit"
+  } ],
+  "name" : "packages"
+}
