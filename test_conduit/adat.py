@@ -42,3 +42,12 @@ tag = "mese"
 # about_mod = "vers"
 # write_mod = "Festékfoltként sötétlik az ég. Valami esni fog. Nem eső, nem jég. És nem virágok"
 # tag_mod = "vers"
+
+
+def conduit_registration(driver):
+    driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+    driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+
