@@ -88,25 +88,25 @@ class TestConduit1(object):
         assert exit.text ==" Log out"
 
 
-# #TC4 creating new blogpost
-#     def test_new_article(self):
-#         self.test_sign_in()
+#TC4 creating new blogpost
+    def test_new_article(self):
+        self.test_sign_in()
 
-#         time.sleep(2)
-#         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
-#         time.sleep(3)
-#         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(title)
-#         self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send_keys(about)
+        time.sleep(2)
+        self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(title)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send_keys(about)
 
-#         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write)
-#         self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag + Keys.ENTER)
-#         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
-#         self.driver.implicitly_wait(8)
-#         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
-#         if edit.is_displayed():
-#             szoveg_down = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div/div[1]/p')
-#             assert write == szoveg_down.text
-#         else: False
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag + Keys.ENTER)
+        self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
+        self.driver.implicitly_wait(8)
+        edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
+        if edit.is_displayed():
+            szoveg_down = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div/div[1]/p')
+            assert write == szoveg_down.text
+        else: False
 
 
 # #TC5 modifying blogpost, removing and adding new tag
