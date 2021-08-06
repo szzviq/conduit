@@ -76,6 +76,7 @@ class TestConduit1(object):
     # TC4 creating new blogpost
     def test_new_article(self):
         conduit_registration(self.driver)
+        conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
         time.sleep(3)
@@ -252,15 +253,8 @@ class TestConduit1(object):
 
     # T12 logout'
     def test_logout(self):
-        # conduit_registration(self.driver)
-        # conduit_signin(self.driver)
-        self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-        self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-        self.driver.implicitly_wait(8)
-        self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+        conduit_registration(self.driver)
+        conduit_signin(self.driver)
         time.sleep(6)
         logout_btn=self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         logout_btn.click()
