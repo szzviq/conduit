@@ -75,7 +75,7 @@ class TestConduit1(object):
 
     # TC4 creating new blogpost
     def test_new_article(self):
-        # conduit_registration(self.driver)
+        conduit_registration(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
         time.sleep(3)
