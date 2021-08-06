@@ -6,9 +6,6 @@ import time
 from adat import *
 
 
-
-
-
 class TestConduit1(object):
     def setup(self):
         browser_options = Options()
@@ -78,7 +75,7 @@ class TestConduit1(object):
 
     # TC4 creating new blogpost
     def test_new_article(self):
-        #conduit_registration(self.driver)
+        # conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
@@ -89,7 +86,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag + Keys.ENTER)
         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
-        self.driver.implicitly_wait(8)
+        self.driver.implicitly_wait(6)
         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
         if edit.is_displayed():
             szoveg_down = self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div/div[1]/p')
@@ -129,23 +126,22 @@ class TestConduit1(object):
     #         else:
     #             False
 
-
     # #TC5 Writing blogposts from file
 
     def test_new_article_from_file(self):
-        #conduit_registration(self.driver)
+        # conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(3)
         sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-        cikkek_szama=len(sajat_cikk2)
+        cikkek_szama = len(sajat_cikk2)
         self.driver.implicitly_wait(4)
-        with open('article.csv', 'r', encoding="utf-8") as csv_in:  # mit nyitunk meg, milyen változó néveel
-            csv_reader = csv.reader(csv_in, delimiter=',')  # mi a file és mi az elválasztó
+        with open('article.csv', 'r', encoding="utf-8") as csv_in:
+            csv_reader = csv.reader(csv_in, delimiter=',')
             next(csv_reader)
             for row in csv_reader:
-                sor = [x.strip(' ') for x in row]  # soronként listába tesszük
+                sor = [x.strip(' ') for x in row]
                 print(row)
                 self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
                 time.sleep(3)
@@ -157,57 +153,57 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-        time.sleep(7)
-        cikkek_szama_iras_utan=len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
-        assert cikkek_szama_iras_utan ==cikkek_szama + 6
-
+        time.sleep(6)
+        cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
+        assert cikkek_szama_iras_utan == cikkek_szama + 6
 
     # #TC6 profile modifying
-    #     def test_modify_profile(self):
-    #         self.test_sign_in()
-    #         self.driver.find_element_by_xpath('//a[@href="#/settings"]').click()
-    #         self.driver.implicitly_wait(2)
-    #         self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
-    #         self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict)
+    def test_modify_profile(self):
+        conduit_signin(self.driver)
+        time.sleep(2)
+        self.driver.find_element_by_xpath('//a[@href="#/settings"]').click()
+        self.driver.implicitly_wait(2)
+        self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
+        self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict)
 
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').send_keys(mod_username)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').clear()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').send_keys(mod_username)
 
-    #         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
-    #         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').send_keys(bio)
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').send_keys(bio)
 
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mod_mail)
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').clear()
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mod_mail)
+        #
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').clear()
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(mod_password)
+        self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
+        self.driver.implicitly_wait(2)
+        self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+        self.driver.implicitly_wait(2)
 
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(mod_password)
-    #         self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
-    #         self.driver.implicitly_wait(2)
-    #         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-    #         self.driver.implicitly_wait(2)
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
+        self.driver.implicitly_wait(2)
+        img = self.driver.find_element_by_xpath('//img[@class="user-img"]').get_attribute('src')
+        motto = self.driver.find_element_by_xpath('//*[@class="user-img"]//following-sibling::p').text
+        assert motto == bio
+        assert img == pict
+        self.driver.find_element_by_xpath('//a[contains(@class ,"btn-outline-secondary")]').click()
+        time.sleep(5)
+        # Visszaallitas
+        # self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
+        # self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict2)
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').clear()
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').send_keys(username)
+        # self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+        # self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
+        # self.driver.implicitly_wait(2)
+        # self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
-    #         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//descendant::li[4]/a').click()
-    #         self.driver.implicitly_wait(2)
-    #         img = self.driver.find_element_by_xpath('//img[@class="user-img"]').get_attribute('src')
-    #         motto = self.driver.find_element_by_xpath('//*[@class="user-img"]//following-sibling::p').text
-    #         assert motto == bio
-    #         assert img == pict
-    #         self.driver.find_element_by_xpath('//a[contains(@class ,"btn-outline-secondary")]').click()
-    #         time.sleep(5)
-    #         #Visszaallitas
-    #         self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
-    #         self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict2)
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').send_keys(username)
-    #         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-    #         self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
-    #         self.driver.implicitly_wait(2)
-    #         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-
-    #TC7 deleting articles
+    # TC7 deleting articles
     def test_delete_article(self):
-        #conduit_registration(self.driver)
+        # conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(1)
         conduit_new_article(self.driver)
@@ -215,7 +211,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(3)
         sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-        torles_elott=len(sajat_cikk)
+        torles_elott = len(sajat_cikk)
         sajat_cikk[-1].click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
@@ -223,8 +219,6 @@ class TestConduit1(object):
         time.sleep(3)
         torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert torles_elott != torles_utan
-
-
 
     # #TC9 Saving posts
     #     def test_text_download(self):
@@ -269,8 +263,8 @@ class TestConduit1(object):
     def test_logout(self):
         # conduit_registration(self.driver)
         conduit_signin(self.driver)
-        time.sleep(4)
-        logout_btn=self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
+        time.sleep(3)
+        logout_btn = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         logout_btn.click()
         time.sleep(2)
         navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
