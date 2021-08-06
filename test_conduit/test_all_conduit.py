@@ -70,19 +70,18 @@ class TestConduit1(object):
 
 
 # #TC3 signin
-#     def test_sign_in(self):
-#         #self.test_accept_cookies()
-#         # password = 'Skel3tons'
-#         # email = 'lancre@gmail5.com'
-#         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-#         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(dummy_mail)
-#         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-#         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-#         time.sleep(5)
+    def test_sign_in(self):
+        #self.test_accept_cookies()
+       
+        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(dummy_mail)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+        self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+        time.sleep(5)
 
-#         exit =self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
-#         print(exit.text)
-#         assert exit.text ==" Log out"
+        exit =self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
+        print(exit.text)
+        assert exit.text ==" Log out"
 
 
 # #TC4 creating new blogpost
