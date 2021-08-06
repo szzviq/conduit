@@ -3,6 +3,7 @@
 # from selenium.webdriver.support.wait import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
 # import time
+import time
 from datetime import datetime
 
 # import csv
@@ -50,4 +51,5 @@ def conduit_registration(driver):
     driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
     driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+    time.sleep(2)
     driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()

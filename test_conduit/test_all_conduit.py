@@ -63,6 +63,7 @@ class TestConduit1(object):
         success = "Welcome!"
         self.driver.implicitly_wait(2)
         assert alert_text.text == success
+        time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
     # #TC3 signin
@@ -262,6 +263,7 @@ class TestConduit1(object):
     # T12 logout'
     def test_logout(self):
         conduit_registration(self.driver)
+        time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
         navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
         assert navbar_osszes[-1].text == "Sign up"
