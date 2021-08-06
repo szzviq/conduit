@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import time
 from adat import *
 
 # def signin(browser,mailcim,password):
@@ -15,22 +16,17 @@ from adat import *
 class TestConduit1(object):
     def setup(self):
         browser_options = Options()
-        browser_options.headless = True
+        browser_options.headless = False
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
 #         self.driver = webdriver.Chrome()
         self.driver.get("http://localhost:1667/#/")
         self.driver.maximize_window()
 
-
     def teardown(self):
-        time.sleep(2)
         self.driver.quit()
-
-
 
 #TC1 accepting cookies
     def test_accept_cookies(self):
-        time.sleep(6)
         self.driver.find_element_by_xpath('//button[contains(@class, "accept")]').click()
         time.sleep(2)
         after_accept = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
