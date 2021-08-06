@@ -134,8 +134,9 @@ class TestConduit1(object):
     def test_new_article_from_file(self):
         conduit_registration(self.driver)
         conduit_signin(self.driver)
+        time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-        time.sleep(5)
+        time.sleep(3)
         sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         cikkek_szama=len(sajat_cikk2)
         self.driver.implicitly_wait(4)
@@ -265,7 +266,7 @@ class TestConduit1(object):
 
     # T12 logout'
     def test_logout(self):
-        conduit_registration(self.driver)
+        # conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(4)
         logout_btn=self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
