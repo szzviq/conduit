@@ -13,10 +13,10 @@ now = datetime.now()
 act_time = now.strftime("%H%M")
 mail = f'szzviq{act_time}@gmail.com'
 # bad_password = 'nemjo'
-username = f'User_new1754'
+username = 'User_new1754'
 password = 'Valami12'
 #signin data
-# dummy_mail ='szzviq1754@gmail.com'
+dummy_mail ='szzviq1754@gmail.com'
 # mail_for_mod_profile='nulltunder@ghail.com'
 
 #data for profile modification
