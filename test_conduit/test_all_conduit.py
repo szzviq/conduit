@@ -55,10 +55,11 @@ class TestConduit1(object):
         self.driver.implicitly_wait(8)
         alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
         success = "Welcome!"
-        self.driver.implicitly_wait(2)
+        self.driver.implicitly_wait(4)
         assert alert_text.text == success
         time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+        time.sleep(3)
 
     # #TC3 signin
     def test_sign_in(self):
