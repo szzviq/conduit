@@ -1,8 +1,6 @@
 [ {
-  "buildOrder" : 6,
-  "reportUrl" : "https://szzviq.github.io/conduit/6/",
+  "buildOrder" : 5,
+  "reportUrl" : "https://szzviq.github.io/conduit/5/",
   "reportName" : "Allure Report with history",
-  "data" : {
-    "duration" : 8134
-  }
+  "data" : { }
 } ]
