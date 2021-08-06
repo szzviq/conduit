@@ -256,7 +256,8 @@ class TestConduit1(object):
 
     # T12 logout'
     def test_logout(self):
-        conduit_signin(self.driver)
+        conduit_registration(self.driver)
+        # conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]').click()
         time.sleep(2)
