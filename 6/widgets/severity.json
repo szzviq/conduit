@@ -1,0 +1,11 @@
+[ {
+  "uid" : "488537ac02895816",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628239341192,
+    "stop" : 1628239349326,
+    "duration" : 8134
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
