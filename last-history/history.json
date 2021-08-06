@@ -9,14 +9,14 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "1b689b90f1a1907",
-      "reportUrl" : "https://szzviq.github.io/conduit/14//#testresult/1b689b90f1a1907",
+      "uid" : "16d0fc6bf74f0b15",
+      "reportUrl" : "https://szzviq.github.io/conduit/14//#testresult/16d0fc6bf74f0b15",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(text(),\"Log out\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
       "time" : {
-        "start" : 1628245105895,
-        "stop" : 1628245111195,
-        "duration" : 5300
+        "start" : 1628245384240,
+        "stop" : 1628245389555,
+        "duration" : 5315
       }
     } ]
   },
@@ -30,13 +30,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "e423869f4868da15",
-      "reportUrl" : "https://szzviq.github.io/conduit/14//#testresult/e423869f4868da15",
+      "uid" : "79ee708de8e644a2",
+      "reportUrl" : "https://szzviq.github.io/conduit/14//#testresult/79ee708de8e644a2",
       "status" : "passed",
       "time" : {
-        "start" : 1628245097663,
-        "stop" : 1628245099778,
-        "duration" : 2115
+        "start" : 1628245374827,
+        "stop" : 1628245376944,
+        "duration" : 2117
       }
     } ]
   },
@@ -50,13 +50,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a9df4616e049dcf5",
-      "reportUrl" : "https://szzviq.github.io/conduit/14//#testresult/a9df4616e049dcf5",
+      "uid" : "93b5bbfbf20450a7",
+      "reportUrl" : "https://szzviq.github.io/conduit/14//#testresult/93b5bbfbf20450a7",
       "status" : "passed",
       "time" : {
-        "start" : 1628245100372,
-        "stop" : 1628245105334,
-        "duration" : 4962
+        "start" : 1628245377520,
+        "stop" : 1628245382667,
+        "duration" : 5147
       }
     } ]
   }
