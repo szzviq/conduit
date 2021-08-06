@@ -1,0 +1,74 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "test_conduit.test_all_conduit",
+    "children" : [ {
+      "name" : "test_accept_cookies",
+      "uid" : "2656f6b8aad94c4f",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628278771544,
+        "stop" : 1628278773637,
+        "duration" : 2093
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_signup",
+      "uid" : "f27734117fd88208",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628278774224,
+        "stop" : 1628278778859,
+        "duration" : 4635
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_sign_in",
+      "uid" : "34c4c479800001c5",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628278780467,
+        "stop" : 1628278788232,
+        "duration" : 7765
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_new_article",
+      "uid" : "463345366275e5f0",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628278788812,
+        "stop" : 1628278793246,
+        "duration" : 4434
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_logout",
+      "uid" : "15bc10d789fea2de",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628278794895,
+        "stop" : 1628278809862,
+        "duration" : 14967
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_conduit.test_all_conduit"
+  } ],
+  "name" : "packages"
+}

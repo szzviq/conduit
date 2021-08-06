@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href=\"#/editor\"]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_new_article",
+        "uid" : "463345366275e5f0",
+        "parentUid" : "c110f16dd600ea72bf75233ea3dd0e70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628278788812,
+          "stop" : 1628278793246,
+          "duration" : 4434
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c110f16dd600ea72bf75233ea3dd0e70"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(text(),\"Log out\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_logout",
+        "uid" : "15bc10d789fea2de",
+        "parentUid" : "ac6c817c4caf36a2701bdc48171b81e5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628278794895,
+          "stop" : 1628278809862,
+          "duration" : 14967
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ac6c817c4caf36a2701bdc48171b81e5"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

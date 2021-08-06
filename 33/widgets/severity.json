@@ -1,0 +1,51 @@
+[ {
+  "uid" : "463345366275e5f0",
+  "name" : "test_new_article",
+  "time" : {
+    "start" : 1628278788812,
+    "stop" : 1628278793246,
+    "duration" : 4434
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f27734117fd88208",
+  "name" : "test_signup",
+  "time" : {
+    "start" : 1628278774224,
+    "stop" : 1628278778859,
+    "duration" : 4635
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "15bc10d789fea2de",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628278794895,
+    "stop" : 1628278809862,
+    "duration" : 14967
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "34c4c479800001c5",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628278780467,
+    "stop" : 1628278788232,
+    "duration" : 7765
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2656f6b8aad94c4f",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628278771544,
+    "stop" : 1628278773637,
+    "duration" : 2093
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
