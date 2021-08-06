@@ -4,13 +4,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from datetime import datetime
-import pyperclip
+# import pyperclip
 import csv
-import ctypes
+# import ctypes
 
-copy          = ctypes.pythonapi._PyUnicode_Copy
-copy.argtypes = [ctypes.py_object]
-copy.restype  = ctypes.py_object
+# copy          = ctypes.pythonapi._PyUnicode_Copy
+# copy.argtypes = [ctypes.py_object]
+# copy.restype  = ctypes.py_object
 
 now = datetime.now()
 act_time = now.strftime("%H%M")
