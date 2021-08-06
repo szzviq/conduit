@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[contains(text(),\"Log out\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_logout",
+        "uid" : "8e313ee12062466c",
+        "parentUid" : "ac6c817c4caf36a2701bdc48171b81e5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628258743160,
+          "stop" : 1628258749506,
+          "duration" : 6346
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ac6c817c4caf36a2701bdc48171b81e5"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
