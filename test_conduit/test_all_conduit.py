@@ -61,21 +61,21 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
     # #TC3 signin
-    # def test_sign_in(self):
-    #     conduit_registration(self.driver)
-    #     self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-    #     self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
-    #     self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
-    #     self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-    #     time.sleep(5)
-    #
-    #     exit = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
-    #     print(exit.text)
-    #     assert exit.text == " Log out"
+    def test_sign_in(self):
+        conduit_registration(self.driver)
+        self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
+        self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+        time.sleep(5)
+
+        exit = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
+        print(exit.text)
+        assert exit.text == " Log out"
 
     # TC4 creating new blogpost
     def test_new_article(self):
-        conduit_registration(self.driver)
+        # conduit_registration(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
         time.sleep(3)
