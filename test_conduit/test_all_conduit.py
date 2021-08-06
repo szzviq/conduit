@@ -56,7 +56,7 @@ class TestConduit1(object):
         self.driver.implicitly_wait(8)
         alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
         success = "Welcome!"
-        self.driver.implicitly_wait(4)
+        time.sleep(4)
         assert alert_text.text == success
         time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
@@ -69,7 +69,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-        time.sleep(5)
+        time.sleep(3)
 
         exit = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         print(exit.text)
@@ -212,14 +212,14 @@ class TestConduit1(object):
         conduit_new_article(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-        time.sleep(5)
+        time.sleep(3)
         sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         torles_elott=len(sajat_cikk)
         sajat_cikk[-1].click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-        time.sleep(5)
+        time.sleep(3)
         torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert torles_elott != torles_utan
 
