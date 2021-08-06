@@ -62,3 +62,12 @@ def conduit_signin(driver):
     time.sleep(2)
     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
 #
+def conduit_new_article(driver):
+
+    driver.find_element_by_xpath('//a[@href="#/editor"]').click()
+    time.sleep(3)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(title)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send_keys(about)
+    driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag)
+    driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
