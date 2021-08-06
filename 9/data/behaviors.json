@@ -2,13 +2,13 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "children" : [ {
     "name" : "test_accept_cookies",
-    "uid" : "d897fb675b48944a",
+    "uid" : "9248d7438ce78388",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1628242772119,
-      "stop" : 1628242772119,
-      "duration" : 0
+      "start" : 1628243048580,
+      "stop" : 1628243050666,
+      "duration" : 2086
     },
     "flaky" : false,
     "newFailed" : false,

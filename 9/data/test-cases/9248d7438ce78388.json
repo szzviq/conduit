@@ -1,12 +1,12 @@
 {
-  "uid" : "d897fb675b48944a",
+  "uid" : "9248d7438ce78388",
   "name" : "test_accept_cookies",
   "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_accept_cookies",
   "historyId" : "994c1330749cbab77c433b0a8e59c160",
   "time" : {
-    "start" : 1628242772119,
-    "stop" : 1628242772119,
-    "duration" : 0
+    "start" : 1628243048580,
+    "stop" : 1628243050666,
+    "duration" : 2086
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,15 +16,15 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "d63835bbab8c4abd",
+      "uid" : "e0df6cc8aa2ed644",
       "name" : "log",
-      "source" : "d63835bbab8c4abd.txt",
+      "source" : "e0df6cc8aa2ed644.txt",
       "type" : "text/plain",
       "size" : 642
     }, {
-      "uid" : "b6cb0d206cbc14ab",
+      "uid" : "fb4b5bf0e8c60bc8",
       "name" : "stderr",
-      "source" : "b6cb0d206cbc14ab.txt",
+      "source" : "fb4b5bf0e8c60bc8.txt",
       "type" : "text/plain",
       "size" : 435
     } ],
@@ -46,10 +46,10 @@
     "value" : "TestConduit1"
   }, {
     "name" : "host",
-    "value" : "fv-az47-991"
+    "value" : "fv-az83-224"
   }, {
     "name" : "thread",
-    "value" : "3809-MainThread"
+    "value" : "3924-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "d897fb675b48944a.json",
+  "source" : "9248d7438ce78388.json",
   "parameterValues" : [ ]
 }

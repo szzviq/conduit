@@ -4,13 +4,13 @@
     "name" : "test_conduit.test_all_conduit",
     "children" : [ {
       "name" : "test_accept_cookies",
-      "uid" : "d897fb675b48944a",
+      "uid" : "9248d7438ce78388",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628242772119,
-        "stop" : 1628242772119,
-        "duration" : 0
+        "start" : 1628243048580,
+        "stop" : 1628243050666,
+        "duration" : 2086
       },
       "flaky" : false,
       "newFailed" : false,

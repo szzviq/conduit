@@ -8,13 +8,13 @@
         "name" : "TestConduit1",
         "children" : [ {
           "name" : "test_accept_cookies",
-          "uid" : "d897fb675b48944a",
+          "uid" : "9248d7438ce78388",
           "parentUid" : "708c787394cf6d4aff0af9c8d693f019",
           "status" : "passed",
           "time" : {
-            "start" : 1628242772119,
-            "stop" : 1628242772119,
-            "duration" : 0
+            "start" : 1628243048580,
+            "stop" : 1628243050666,
+            "duration" : 2086
           },
           "flaky" : false,
           "newFailed" : false,
