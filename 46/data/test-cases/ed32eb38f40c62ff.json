@@ -1,12 +1,12 @@
 {
-  "uid" : "3e778b94a1721264",
-  "name" : "test_accept_cookies",
-  "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_accept_cookies",
-  "historyId" : "994c1330749cbab77c433b0a8e59c160",
+  "uid" : "ed32eb38f40c62ff",
+  "name" : "test_sign_in",
+  "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_sign_in",
+  "historyId" : "c329304a2ddb102b1d7f662718ed6ae2",
   "time" : {
-    "start" : 1628291763581,
-    "stop" : 1628291765630,
-    "duration" : 2049
+    "start" : 1628343559915,
+    "stop" : 1628343572656,
+    "duration" : 12741
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,21 +16,27 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "833e41cad1eba30c",
+      "uid" : "366627f97b08c98c",
       "name" : "log",
-      "source" : "833e41cad1eba30c.txt",
+      "source" : "366627f97b08c98c.txt",
       "type" : "text/plain",
-      "size" : 642
+      "size" : 344
     }, {
-      "uid" : "78411bc2fff53acc",
-      "name" : "stderr",
-      "source" : "78411bc2fff53acc.txt",
+      "uid" : "97763b2ab1a574a9",
+      "name" : "stdout",
+      "source" : "97763b2ab1a574a9.txt",
       "type" : "text/plain",
-      "size" : 435
+      "size" : 9
+    }, {
+      "uid" : "d4fb361dcc71a480",
+      "name" : "stderr",
+      "source" : "d4fb361dcc71a480.txt",
+      "type" : "text/plain",
+      "size" : 215
     } ],
     "parameters" : [ ],
     "stepsCount" : 0,
-    "attachmentsCount" : 2,
+    "attachmentsCount" : 3,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -46,10 +52,10 @@
     "value" : "TestConduit1"
   }, {
     "name" : "host",
-    "value" : "fv-az47-991"
+    "value" : "fv-az83-224"
   }, {
     "name" : "thread",
-    "value" : "3706-MainThread"
+    "value" : "3826-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +79,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "3e778b94a1721264.json",
+  "source" : "ed32eb38f40c62ff.json",
   "parameterValues" : [ ]
 }
