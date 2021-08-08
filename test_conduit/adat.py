@@ -12,9 +12,9 @@ import csv
 now = datetime.now()
 act_time = now.strftime("%H%M")
 # mail = f'szzviq{act_time}@gmail.com'
-mail_1 = "testuser_6@ghail.com"
+mail_1 = "testuser_7@ghail.com"
 # bad_password = 'nemjo'
-username = 'User_new6'
+username = 'User_new7'
 password = 'Valami12'
 
 # signin data
