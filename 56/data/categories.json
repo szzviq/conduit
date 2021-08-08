@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <a href=\"#/@mod_nev1445/\" class=\"nav-link\">...</a> is not clickable at point (615, 26). Other element would receive the click: <div class=\"swal-overlay swal-overlay--show-modal\" tabindex=\"-1\">...</div>\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_delete_article",
+        "uid" : "580b42bbebf2dad2",
+        "parentUid" : "57fdb06c934569e2180bb9f4293528d1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628434062751,
+          "stop" : 1628434076033,
+          "duration" : 13282
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "57fdb06c934569e2180bb9f4293528d1"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//li/a[contains(@href, \"#/@\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "cd04d270baf49b51",
+        "parentUid" : "c60674df29c807749becd70e7bb1a5cc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628434124088,
+          "stop" : 1628434134129,
+          "duration" : 10041
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c60674df29c807749becd70e7bb1a5cc"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
