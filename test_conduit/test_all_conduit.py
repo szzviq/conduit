@@ -42,8 +42,7 @@ class TestConduit1(object):
     #         assert alert_n_subtext.text == reg_fail
     #         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
-
-    #TC2 REGISTRATION
+    # TC2 REGISTRATION
 
     def test_signup(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
@@ -65,8 +64,7 @@ class TestConduit1(object):
         username_value = self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').text
         assert username_value == username
 
-
-    #TC3 SIGNIN
+    # TC3 SIGNIN
     def test_sign_in(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
@@ -77,11 +75,11 @@ class TestConduit1(object):
         # A "Log out" link meglétének ellenőrzése
         exit = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         assert exit.text == " Log out"
-        #Annak ellenőrzése, hogy valóban megfelelő userrel léptünk-e be
+        # Annak ellenőrzése, hogy valóban megfelelő userrel léptünk-e be
         username_value = self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').text
         assert username_value == username
 
-    #TC4 CREATING NEW ARTICLE
+    # TC4 CREATING NEW ARTICLE
     def test_new_article(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -101,13 +99,13 @@ class TestConduit1(object):
         else:
             False
 
-#TC5 MODIFYING ARTICLE
+    # TC5 MODIFYING ARTICLE
     def test_modify_article(self):
         conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
-        sajat_cikk= self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         sajat_cikk[0].click()
         self.driver.implicitly_wait(4)
         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
@@ -133,7 +131,7 @@ class TestConduit1(object):
         else:
             False
 
-    #TC6 IMPORT DATA FROM FILE
+    # TC6 IMPORT DATA FROM FILE
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -163,7 +161,7 @@ class TestConduit1(object):
         cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert cikkek_szama_iras_utan == cikkek_szama + 6
 
-    #TC7 MODIFYING PROFILE
+    # TC7 MODIFYING PROFILE
     def test_modify_profile(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -182,7 +180,7 @@ class TestConduit1(object):
         time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
         time.sleep(4)
-        #módosított profiladatok ellenőrzése
+        # módosított profiladatok ellenőrzése
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         img = self.driver.find_element_by_xpath('//img[@class="user-img"]').get_attribute('src')
@@ -201,7 +199,7 @@ class TestConduit1(object):
         # self.driver.implicitly_wait(2)
         # self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
-    #TC8 DELETING ARTICLES
+    # TC8 DELETING ARTICLES
     def test_delete_article(self):
         conduit_signin(self.driver)
         time.sleep(1)
@@ -219,7 +217,7 @@ class TestConduit1(object):
         torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert torles_elott != torles_utan
 
-    #TC9 SAVING DATA
+    # TC9 SAVING DATA
 
     def test_sampletext_download(self):
         conduit_signin(self.driver)
@@ -230,7 +228,7 @@ class TestConduit1(object):
         time.sleep(2)
         self.driver.find_element_by_xpath(f'//a[@href="#/@{blogger_name}/"]').click()
         time.sleep(3)
-        #a user posztjainak fileba írása
+        # a user posztjainak fileba írása
         posztok = self.driver.find_elements_by_xpath('//a/h1')
         print(self.driver.find_elements_by_xpath('//a/p')[0].text)
         for i in range(len(posztok)):
@@ -251,18 +249,17 @@ class TestConduit1(object):
         time.sleep(3)
         assert post_about_1 == text_list[1]
         time.sleep(2)
-        #testfile törlése
+        # testfile törlése
         open("blogposzt2.txt", "w").close()
 
-
-#TC10 PAGINATION
+    # TC10 PAGINATION
 
     def test_pagination(self):
         conduit_signin(self.driver)
         time.sleep(2)
         lapozo_oldalak = self.driver.find_elements_by_xpath('//ul[@class="pagination"]/li/a')
-        last_number=lapozo_oldalak[-1].text
-        #A lapozóoldalak számának ellenőrzése, amennyiben az nagyobb, mint 0
+        last_number = lapozo_oldalak[-1].text
+        # A lapozóoldalak számának ellenőrzése, amennyiben az nagyobb, mint 0
         assert (len(lapozo_oldalak) > 0)
         for oldal in lapozo_oldalak:
             oldal.click()
@@ -270,22 +267,23 @@ class TestConduit1(object):
             continue
         assert len(lapozo_oldalak) == int(last_number)
 
-# T11 LIST FAVOURITED POSTS
+    # T11 LIST FAVOURITED POSTS
 
     def test_list_faved_posts(self):
         time.sleep(4)
         fav_buttons = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/i')
         counter = 0
         faved = 0
-        #az első 10 blogposzt likeolása ellenőrzéssel
+        # az első 10 blogposzt likeolása ellenőrzéssel
         for fav in fav_buttons[0:10]:
             fav.click()
             time.sleep(1)
-            number_of_likes = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/span')[counter]
+            number_of_likes = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/span')[
+                counter]
             if int(number_of_likes.text) > 0:
                 faved += 1
             else:
-        #a hibás blogposzt jelölése
+                # a hibás blogposzt jelölése
                 failed_ones = []
                 failed_ones.append(counter)
                 for i in failed_ones:
@@ -295,21 +293,20 @@ class TestConduit1(object):
             counter += 1
         time.sleep(6)
         # a kedvencnek jelölt blogposztok számának ellenőrzése a Kedvencek aloldalon
-        self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
+        self.driver.find_element_by_xpath('//nav/div/ul/li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
         assert len(faved_links) == faved
 
-
-#TC12 LOGOUT
+    # TC12 LOGOUT
     def test_logout(self):
         conduit_signin(self.driver)
         time.sleep(3)
         logout_btn = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         logout_btn.click()
         time.sleep(2)
-        #A kilépés megtörténtének ellenőrzése
+        # A kilépés megtörténtének ellenőrzése
         navbar_all = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
         assert navbar_all[-1].text == "Sign up"
