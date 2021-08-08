@@ -271,6 +271,7 @@ class TestConduit1(object):
     # T11 LIST FAVOURITED POSTS
 
     def test_list_faved_posts(self):
+        conduit_signin(self.driver)
         time.sleep(4)
         fav_buttons = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/i')
         counter = 0
