@@ -101,7 +101,7 @@ class TestConduit1(object):
         else:
             False
 
-#TC5 modifying blogpost, removing and adding new tag
+#TC5 MODIFYING ARTICLE
     def test_modify_article(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -123,7 +123,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write_mod)
 
         self.driver.find_element_by_xpath('//*[@class ="ti-icon-close"]').click()
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag_mod + Keys.ENTER)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag_mod)
         self.driver.implicitly_wait(4)
         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
         time.sleep(4)
@@ -133,7 +133,7 @@ class TestConduit1(object):
         else:
             False
 
-    # #TC5 IMPORT DATA FROM FILE
+    #TC6 IMPORT DATA FROM FILE
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -162,7 +162,7 @@ class TestConduit1(object):
         cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert cikkek_szama_iras_utan == cikkek_szama + 6
 
-    #TC6 MODIFYING PROFILE
+    #TC7 MODIFYING PROFILE
     def test_modify_profile(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -200,7 +200,7 @@ class TestConduit1(object):
         # self.driver.implicitly_wait(2)
         # self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
-    #TC7 DELETING ARTICLES
+    #TC8 DELETING ARTICLES
     def test_delete_article(self):
         conduit_signin(self.driver)
         time.sleep(1)
@@ -275,7 +275,7 @@ class TestConduit1(object):
         for fav in fav_buttons[0:3]:
             fav.click()
             time.sleep(1)
-        time.sleep(1)
+        time.sleep(2)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
