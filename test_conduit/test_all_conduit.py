@@ -44,6 +44,7 @@ class TestConduit1(object):
 
 
     #TC2 REGISTRATION
+
     def test_signup(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
         time.sleep(2)
@@ -73,7 +74,7 @@ class TestConduit1(object):
 
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         time.sleep(3)
-        # A Log out link meglétének ellenőrzése
+        # A "Log out" link meglétének ellenőrzése
         exit = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         assert exit.text == " Log out"
         #Annak ellenőrzése, hogy valóban megfelelő userrel léptünk-e be
@@ -82,7 +83,6 @@ class TestConduit1(object):
 
     #TC4 CREATING NEW ARTICLE
     def test_new_article(self):
-        # conduit_registration(self.driver)
         conduit_signin(self.driver)
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
@@ -182,9 +182,9 @@ class TestConduit1(object):
         time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
         time.sleep(4)
-
+        #módosított profiladatok ellenőrzése
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
-        self.driver.implicitly_wait(2)
+        time.sleep(2)
         img = self.driver.find_element_by_xpath('//img[@class="user-img"]').get_attribute('src')
         motto = self.driver.find_element_by_xpath('//*[@class="user-img"]//following-sibling::p').text
         assert motto == bio
