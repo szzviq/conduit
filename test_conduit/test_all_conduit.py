@@ -262,6 +262,7 @@ class TestConduit1(object):
         time.sleep(2)
         lapozo_oldalak = self.driver.find_elements_by_xpath('//ul[@class="pagination"]/li/a')
         last_number=lapozo_oldalak[-1].text
+        #A lapozóoldalak számának ellenőrzése, amennyiben az nagyobb, mint 0
         assert (len(lapozo_oldalak) > 0)
         for oldal in lapozo_oldalak:
             oldal.click()
@@ -276,6 +277,7 @@ class TestConduit1(object):
         fav_buttons = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/i')
         counter = 0
         faved = 0
+        #az első 10 blogposzt likeolása ellenőrzéssel
         for fav in fav_buttons[0:10]:
             fav.click()
             time.sleep(1)
@@ -283,6 +285,7 @@ class TestConduit1(object):
             if int(number_of_likes.text) > 0:
                 faved += 1
             else:
+        #a hibás blogposzt jelölése
                 failed_ones = []
                 failed_ones.append(counter)
                 for i in failed_ones:
@@ -291,12 +294,12 @@ class TestConduit1(object):
                         f'Failure: an error occured during the like process of Article{i + 1}, which is called {failed_title}')
             counter += 1
         time.sleep(6)
+        # a kedvencnek jelölt blogposztok számának ellenőrzése a Kedvencek aloldalon
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
-
         assert len(faved_links) == faved
 
 
@@ -307,5 +310,6 @@ class TestConduit1(object):
         logout_btn = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         logout_btn.click()
         time.sleep(2)
+        #A kilépés megtörténtének ellenőrzése
         navbar_all = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
         assert navbar_all[-1].text == "Sign up"
