@@ -7,19 +7,15 @@ import time
 from datetime import datetime
 import csv
 
-#
-# signup data
 now = datetime.now()
 act_time = now.strftime("%H%M")
-# mail = f'szzviq{act_time}@gmail.com'
+#
+# signup data
+
 mail_1 = "testuser_1@ghail.com"
 # bad_password = 'nemjo'
 username = 'User_new1'
 password = 'Valami12'
-
-# signin data
-# dummy_mail ='szzviq1754@gmail.com'
-# mail_for_mod_profile='nulltunder@ghail.com'
 
 # data for new article
 title = f"Story{act_time}"
@@ -32,12 +28,11 @@ pict = 'https://thumbs.dreamstime.com/b/goth-girl-avatar-twin-tails-flat-7454156
 # pict2 = "https://static.productionready.io/images/smiley-cyrus.jpg"
 # mod_mail=f'modositva{act_time}@gmail.com'
 mod_username = f'mod_nev{act_time}'
-# mod_password='Valami13'
 bio = "Én vagyok a mesebeli okos lány, hoztam is, meg nem is..."
 
 
 #
-# data for profile modification
+# data for post modification
 # title_mod = "Nem virágok W.H.Auden"
 # about_mod = "vers"
 # write_mod = "Festékfoltként sötétlik az ég. Valami esni fog. Nem eső, nem jég. És nem virágok"

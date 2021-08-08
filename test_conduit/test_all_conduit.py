@@ -180,7 +180,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-        self.driver.implicitly_wait(4)
+        time.sleep(4)
 
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         self.driver.implicitly_wait(2)
@@ -275,6 +275,7 @@ class TestConduit1(object):
         for fav in fav_buttons[0:3]:
             fav.click()
             time.sleep(1)
+        time.sleep(1)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
