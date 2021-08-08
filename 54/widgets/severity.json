@@ -1,0 +1,121 @@
+[ {
+  "uid" : "9d43331d8e59fcb2",
+  "name" : "test_new_article_from_file",
+  "time" : {
+    "start" : 1628429599506,
+    "stop" : 1628429652934,
+    "duration" : 53428
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1350a62a52f5eea5",
+  "name" : "test_modify_profile",
+  "time" : {
+    "start" : 1628429653479,
+    "stop" : 1628429669712,
+    "duration" : 16233
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "217f3a99b021196",
+  "name" : "test_new_article",
+  "time" : {
+    "start" : 1628429577258,
+    "stop" : 1628429584975,
+    "duration" : 7717
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1dd43d74ce523db4",
+  "name" : "test_signup",
+  "time" : {
+    "start" : 1628429557678,
+    "stop" : 1628429571940,
+    "duration" : 14262
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b5892665a5c71cab",
+  "name" : "test_list_faved_posts",
+  "time" : {
+    "start" : 1628429731737,
+    "stop" : 1628429739768,
+    "duration" : 8031
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "72bd8cf6dd3fb660",
+  "name" : "test_sampletext_download",
+  "time" : {
+    "start" : 1628429686747,
+    "stop" : 1628429719325,
+    "duration" : 32578
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "edb4ea58548e4acd",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628429573461,
+    "stop" : 1628429576742,
+    "duration" : 3281
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9f550c6562b4080",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628429553884,
+    "stop" : 1628429555945,
+    "duration" : 2061
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fdb9166e1bb4af2c",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628429741373,
+    "stop" : 1628429748677,
+    "duration" : 7304
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ddb1fa5ab482f829",
+  "name" : "test_modify_article",
+  "time" : {
+    "start" : 1628429586520,
+    "stop" : 1628429597976,
+    "duration" : 11456
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3fb2a4044f09c137",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628429720856,
+    "stop" : 1628429731184,
+    "duration" : 10328
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "63f957e63312ce26",
+  "name" : "test_delete_article",
+  "time" : {
+    "start" : 1628429670264,
+    "stop" : 1628429686217,
+    "duration" : 15953
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
