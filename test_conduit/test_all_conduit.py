@@ -59,7 +59,7 @@ class TestConduit1(object):
         assert alert_text.text == success
         time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-        time.sleep(3)
+        time.sleep(4)
         # Annak ellenőrzése, hogy valóban megfelelő userrel léptünk-e be
         username_value = self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').text
         assert username_value == username
@@ -180,7 +180,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
-        self.driver.implicitly_wait(2)
+        self.driver.implicitly_wait(4)
 
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         self.driver.implicitly_wait(2)
