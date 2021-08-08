@@ -1,0 +1,121 @@
+[ {
+  "uid" : "3ae7949bd90a4f07",
+  "name" : "test_sampletext_download",
+  "time" : {
+    "start" : 1628453063262,
+    "stop" : 1628453096002,
+    "duration" : 32740
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "57742d34fcfcfaeb",
+  "name" : "test_new_article_from_file",
+  "time" : {
+    "start" : 1628452971539,
+    "stop" : 1628453026615,
+    "duration" : 55076
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d16c7714bd651c40",
+  "name" : "test_delete_article",
+  "time" : {
+    "start" : 1628453048075,
+    "stop" : 1628453061505,
+    "duration" : 13430
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9abb729bc2850f9e",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628452945540,
+    "stop" : 1628452948876,
+    "duration" : 3336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29e5e20ded1e955",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628453096588,
+    "stop" : 1628453106995,
+    "duration" : 10407
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "80e1fe5d6a5ff965",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628453138233,
+    "stop" : 1628453145623,
+    "duration" : 7390
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0f7f984ef87e2b2",
+  "name" : "test_signup",
+  "time" : {
+    "start" : 1628452929276,
+    "stop" : 1628452943933,
+    "duration" : 14657
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f3ac87dd2ca18163",
+  "name" : "test_list_faved_posts",
+  "time" : {
+    "start" : 1628453108550,
+    "stop" : 1628453136669,
+    "duration" : 28119
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7bc9c9f4110bdfe1",
+  "name" : "test_modify_profile",
+  "time" : {
+    "start" : 1628453028198,
+    "stop" : 1628453046473,
+    "duration" : 18275
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3b0893faff906e57",
+  "name" : "test_modify_article",
+  "time" : {
+    "start" : 1628452959109,
+    "stop" : 1628452970939,
+    "duration" : 11830
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5489def883646654",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628452925585,
+    "stop" : 1628452927690,
+    "duration" : 2105
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cda2b3b3751ad189",
+  "name" : "test_new_article",
+  "time" : {
+    "start" : 1628452950485,
+    "stop" : 1628452958499,
+    "duration" : 8014
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
