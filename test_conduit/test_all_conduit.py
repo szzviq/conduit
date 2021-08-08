@@ -290,7 +290,7 @@ class TestConduit1(object):
                     print(
                         f'Failure: an error occured during the like process of Article{i + 1}, which is called {failed_title}')
             counter += 1
-        time.sleep(2)
+        time.sleep(4)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
