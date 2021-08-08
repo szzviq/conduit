@@ -268,8 +268,19 @@ class TestConduit1(object):
             continue
         assert len(lapozo_oldalak) == int(last_number)
 
-    # T11 list_faved_items
-
+# T11 LIST FAVOURITED POSTS
+    def test_list_faved_posts(self):
+        time.sleep(4)
+        fav_buttons = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/i')
+        for fav in fav_buttons[0:3]:
+            fav.click()
+            time.sleep(1)
+        self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
+        time.sleep(3)
+        faved_links = self.driver.find_elements_by_xpath('//a/h1')
+        assert len(faved_links) == 3
 #TC11 LOGOUT
     def test_logout(self):
         conduit_signin(self.driver)
