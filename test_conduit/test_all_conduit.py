@@ -213,6 +213,7 @@ class TestConduit1(object):
         sajat_cikk[-1].click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
+        time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(3)
         torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
