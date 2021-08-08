@@ -157,6 +157,7 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(sor[3])
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
+        time.sleep(2)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(6)
         cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
@@ -269,19 +270,34 @@ class TestConduit1(object):
         assert len(lapozo_oldalak) == int(last_number)
 
 # T11 LIST FAVOURITED POSTS
+
     def test_list_faved_posts(self):
         time.sleep(4)
         fav_buttons = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/i')
-        for fav in fav_buttons[0:3]:
+        counter = 0
+        faved = 0
+        for fav in fav_buttons[0:10]:
             fav.click()
             time.sleep(1)
+            number_of_likes = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/span')[counter]
+            if int(number_of_likes.text) > 0:
+                faved += 1
+            else:
+                failed_ones = []
+                failed_ones.append(counter)
+                for i in failed_ones:
+                    failed_title = self.driver.find_elements_by_xpath('//a/h1')[i].text
+                    print(
+                        f'Failure: an error occured during the like process of Article{i + 1}, which is called {failed_title}')
+            counter += 1
         time.sleep(2)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
-        assert len(faved_links) == 3
+
+        assert len(faved_links) == faved
 
 
 #TC12 LOGOUT
