@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//li/a[contains(@href, \"#/@\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_signup",
+        "uid" : "807bcf8f54f4361c",
+        "parentUid" : "c60674df29c807749becd70e7bb1a5cc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628425504424,
+          "stop" : 1628425527163,
+          "duration" : 22739
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_list_faved_posts",
+        "uid" : "59e3b5676ea325db",
+        "parentUid" : "c60674df29c807749becd70e7bb1a5cc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628425685898,
+          "stop" : 1628425691939,
+          "duration" : 6041
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c60674df29c807749becd70e7bb1a5cc"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
