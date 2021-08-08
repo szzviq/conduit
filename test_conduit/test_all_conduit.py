@@ -104,9 +104,9 @@ class TestConduit1(object):
 #TC5 modifying blogpost, removing and adding new tag
     def test_modify_article(self):
         conduit_signin(self.driver)
-
-        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-        time.sleep(5)
+        time.sleep(2)
+        self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
+        time.sleep(2)
         sajat_cikk= self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         sajat_cikk[0].click()
         self.driver.implicitly_wait(4)
@@ -178,7 +178,7 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').send_keys(bio)
         self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
-        self.driver.implicitly_wait(2)
+        time.sleep(2)
         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
         time.sleep(4)
 
@@ -284,12 +284,12 @@ class TestConduit1(object):
         assert len(faved_links) == 3
 
 
-#TC11 LOGOUT
+#TC12 LOGOUT
     def test_logout(self):
         conduit_signin(self.driver)
         time.sleep(3)
         logout_btn = self.driver.find_element_by_xpath('//a[contains(text(),"Log out")]')
         logout_btn.click()
         time.sleep(2)
-        navbar_osszes = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
-        assert navbar_osszes[-1].text == "Sign up"
+        navbar_all = self.driver.find_elements_by_xpath('//ul[contains(@class,"navbar-nav")]/li')
+        assert navbar_all[-1].text == "Sign up"
