@@ -33,10 +33,10 @@ bio = "Én vagyok a mesebeli okos lány, hoztam is, meg nem is..."
 
 #
 # data for post modification
-# title_mod = "Nem virágok W.H.Auden"
-# about_mod = "vers"
-# write_mod = "Festékfoltként sötétlik az ég. Valami esni fog. Nem eső, nem jég. És nem virágok"
-# tag_mod = "vers"
+title_mod = "Nem virágok W.H.Auden"
+about_mod = "vers"
+write_mod = "Festékfoltként sötétlik az ég. Valami esni fog. Nem eső, nem jég. És nem virágok"
+tag_mod = "vers"
 
 
 def conduit_registration(driver):

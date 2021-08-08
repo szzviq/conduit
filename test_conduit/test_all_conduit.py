@@ -101,37 +101,37 @@ class TestConduit1(object):
         else:
             False
 
-    # #TC5 modifying blogpost, removing and adding new tag
-    #     def test_modify_article(self):
-    #         self.test_sign_in()
+#TC5 modifying blogpost, removing and adding new tag
+    def test_modify_article(self):
+        conduit_signin(self.driver)
 
-    #         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-    #         time.sleep(5)
-    #         sajat_cikk= self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-    #         sajat_cikk[0].click()
-    #         self.driver.implicitly_wait(4)
-    #         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
-    #         edit.click()
-    #         self.driver.implicitly_wait(2)
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(title_mod)
+        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
+        time.sleep(5)
+        sajat_cikk= self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        sajat_cikk[0].click()
+        self.driver.implicitly_wait(4)
+        edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
+        edit.click()
+        self.driver.implicitly_wait(2)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').clear()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(title_mod)
 
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').clear()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send_keys(about_mod)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').clear()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"about")]').send_keys(about_mod)
 
-    #         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').clear()
-    #         self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write_mod)
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').clear()
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"Write your")]').send_keys(write_mod)
 
-    #         self.driver.find_element_by_xpath('//*[@class ="ti-icon-close"]').click()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag_mod + Keys.ENTER)
-    #         self.driver.implicitly_wait(4)
-    #         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
-    #         time.sleep(4)
-    #         if self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]').is_displayed():
-    #             szoveg_down2 = self.driver.find_element_by_xpath('//div[@class="col-xs-12"]//div//p')
-    #             assert write_mod == szoveg_down2.text
-    #         else:
-    #             False
+        self.driver.find_element_by_xpath('//*[@class ="ti-icon-close"]').click()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(tag_mod + Keys.ENTER)
+        self.driver.implicitly_wait(4)
+        self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
+        time.sleep(4)
+        if self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]').is_displayed():
+            szoveg_down2 = self.driver.find_element_by_xpath('//div[@class="col-xs-12"]//div//p')
+            assert write_mod == szoveg_down2.text
+        else:
+            False
 
     # #TC5 IMPORT DATA FROM FILE
     def test_new_article_from_file(self):
@@ -282,6 +282,8 @@ class TestConduit1(object):
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
         assert len(faved_links) == 3
+
+
 #TC11 LOGOUT
     def test_logout(self):
         conduit_signin(self.driver)
