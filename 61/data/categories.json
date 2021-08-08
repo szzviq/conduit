@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 18 == 9\n +  where 18 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"1fa193dedbb738d98a02574c359d1d9c\", element=\"dc20e3c2-45b0-...belement.WebElement (session=\"1fa193dedbb738d98a02574c359d1d9c\", element=\"4f71c2c9-24ab-4874-9fa5-21595a72a228\")>, ...])",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "c588c9dadc892ea0",
+        "parentUid" : "13147c3607a6010f3f16e3f77bf9a472",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628453975913,
+          "stop" : 1628454004018,
+          "duration" : 28105
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "13147c3607a6010f3f16e3f77bf9a472"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
