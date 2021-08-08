@@ -155,9 +155,9 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//input[contains(@placeholder,"tags")]').send_keys(sor[3])
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
-        time.sleep(2)
+        time.sleep(5)
         self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
-        time.sleep(6)
+        time.sleep(4)
         cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert cikkek_szama_iras_utan == cikkek_szama + 6
 
