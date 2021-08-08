@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[contains(text(),\"Edit\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_modify_article",
+        "uid" : "86ea045eab141d7e",
+        "parentUid" : "a51598792d492c51909f53b084eed1cf",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628450241822,
+          "stop" : 1628450252243,
+          "duration" : 10421
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a51598792d492c51909f53b084eed1cf"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//nav/div/ul/li/a[starts-with(@href, \"#/@\")]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "a3b6fbd987ab1431",
+        "parentUid" : "d72d42de6b77dfe6a3e7252ae2dc5c90",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628450390807,
+          "stop" : 1628450400845,
+          "duration" : 10038
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d72d42de6b77dfe6a3e7252ae2dc5c90"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
