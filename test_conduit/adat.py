@@ -9,11 +9,10 @@ import csv
 
 now = datetime.now()
 act_time = now.strftime("%H%M")
-# signup data
 
-mail= "testuser_4@ghail.com"
-#bad_password = 'nemjo'
-username = 'User_new4'
+# signup data
+mail= "testuser_5@ghail.com"
+username = 'User_new5'
 password = 'Valami12'
 
 # data for new article
