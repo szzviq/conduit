@@ -4,38 +4,38 @@
     "name" : "test_conduit.test_all_conduit",
     "children" : [ {
       "name" : "test_homepage",
-      "uid" : "fddc7f9d806d2fdd",
+      "uid" : "8726cd232da4ec4b",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619504904,
-        "stop" : 1628619506996,
-        "duration" : 2092
+        "start" : 1628623767844,
+        "stop" : 1628623769917,
+        "duration" : 2073
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_accept_cookies",
-      "uid" : "c43ba96003fc9854",
+      "uid" : "631731157909f067",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619507570,
-        "stop" : 1628619509714,
-        "duration" : 2144
+        "start" : 1628623770413,
+        "stop" : 1628623772470,
+        "duration" : 2057
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_bad_signup",
-      "uid" : "d46a1ec3c0f5c12f",
+      "uid" : "1526bab158455be4",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619511260,
-        "stop" : 1628619518628,
+        "start" : 1628623773949,
+        "stop" : 1628623781317,
         "duration" : 7368
       },
       "flaky" : false,
@@ -43,143 +43,143 @@
       "parameters" : [ ]
     }, {
       "name" : "test_signup",
-      "uid" : "fef136033b006de5",
+      "uid" : "72f156e1672b5428",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619520172,
-        "stop" : 1628619534696,
-        "duration" : 14524
+        "start" : 1628623782798,
+        "stop" : 1628623797126,
+        "duration" : 14328
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_sign_in",
-      "uid" : "44c3ea56428e3aef",
+      "uid" : "e6bd16eae1e959a4",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619535275,
-        "stop" : 1628619538566,
-        "duration" : 3291
+        "start" : 1628623798601,
+        "stop" : 1628623801894,
+        "duration" : 3293
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_new_article",
-      "uid" : "5a49be265c75550a",
+      "uid" : "f0dbef678857a287",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619540142,
-        "stop" : 1628619550791,
-        "duration" : 10649
+        "start" : 1628623802376,
+        "stop" : 1628623812991,
+        "duration" : 10615
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_modify_article",
-      "uid" : "e4853334c2b077fb",
+      "uid" : "d0fb6d438c791e1c",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
-      "status" : "passed",
+      "status" : "broken",
       "time" : {
-        "start" : 1628619552379,
-        "stop" : 1628619568493,
-        "duration" : 16114
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "test_new_article_from_file",
-      "uid" : "59ef47a98b4d27fa",
-      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
-      "status" : "failed",
-      "time" : {
-        "start" : 1628619570064,
-        "stop" : 1628619626583,
-        "duration" : 56519
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "test_modify_profile",
-      "uid" : "4c73c67710c34d16",
-      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1628619627212,
-        "stop" : 1628619645215,
-        "duration" : 18003
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "test_delete_article",
-      "uid" : "14440f6123883982",
-      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1628619646788,
-        "stop" : 1628619663665,
-        "duration" : 16877
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "test_sampletext_download",
-      "uid" : "74d9bcd3f649e9a7",
-      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1628619664241,
-        "stop" : 1628619718372,
-        "duration" : 54131
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "test_pagination",
-      "uid" : "8f4b881e180d106f",
-      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1628619719936,
-        "stop" : 1628619730294,
+        "start" : 1628623814528,
+        "stop" : 1628623824886,
         "duration" : 10358
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "test_list_faved_posts",
-      "uid" : "15e1858e055b51f5",
+      "name" : "test_new_article_from_file",
+      "uid" : "2e733d7726ca06ec",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "failed",
       "time" : {
-        "start" : 1628619731856,
-        "stop" : 1628619759848,
-        "duration" : 27992
+        "start" : 1628623825445,
+        "stop" : 1628623881967,
+        "duration" : 56522
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_modify_profile",
+      "uid" : "46e147c60927819",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628623883453,
+        "stop" : 1628623901446,
+        "duration" : 17993
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_delete_article",
+      "uid" : "1900f3d03071f8f0",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628623902938,
+        "stop" : 1628623919778,
+        "duration" : 16840
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_sampletext_download",
+      "uid" : "2b5e77f142c8ca3e",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628623921261,
+        "stop" : 1628623948873,
+        "duration" : 27612
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_pagination",
+      "uid" : "f7fb5dd0a93a5b85",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628623949367,
+        "stop" : 1628623959704,
+        "duration" : 10337
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_list_faved_posts",
+      "uid" : "befc6cf57e331d3a",
+      "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
+      "status" : "failed",
+      "time" : {
+        "start" : 1628623961205,
+        "stop" : 1628623989172,
+        "duration" : 27967
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_logout",
-      "uid" : "6c940bbf2fea3238",
+      "uid" : "5812e4edad80b8fa",
       "parentUid" : "0d8e9d892935aef4f9d6202e281941cd",
       "status" : "passed",
       "time" : {
-        "start" : 1628619761424,
-        "stop" : 1628619768740,
-        "duration" : 7316
+        "start" : 1628623990672,
+        "stop" : 1628623998055,
+        "duration" : 7383
       },
       "flaky" : false,
       "newFailed" : false,

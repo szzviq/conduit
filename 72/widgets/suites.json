@@ -5,9 +5,9 @@
     "name" : "test_conduit",
     "statistic" : {
       "failed" : 2,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 11,
       "unknown" : 0,
       "total" : 14
     }

@@ -1,0 +1,86 @@
+{
+  "uid" : "2e733d7726ca06ec",
+  "name" : "test_new_article_from_file",
+  "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_new_article_from_file",
+  "historyId" : "118977acd433c20dfae392836695407f",
+  "time" : {
+    "start" : 1628623825445,
+    "stop" : 1628623881967,
+    "duration" : 56522
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 7 == (12 + 6)",
+  "statusTrace" : "self = <test_all_conduit.TestConduit1 object at 0x7f52bfce8a90>\n\n    def test_new_article_from_file(self):\n        conduit_signin(self.driver)\n        time.sleep(2)\n        self.driver.find_element_by_xpath('//*[@class=\"nav navbar-nav pull-xs-right\"]//li[4]/a').click()\n        time.sleep(3)\n        sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id=\"app\"]//a/h1')\n        cikkek_szama = len(sajat_cikk2)\n        time.sleep(2)\n        with open('article.csv', 'r', encoding=\"utf-8\") as csv_in:\n            csv_reader = csv.reader(csv_in, delimiter=',')\n            next(csv_reader)\n            for row in csv_reader:\n                sor = [x.strip(' ') for x in row]\n                self.driver.find_element_by_xpath('//a[@href=\"#/editor\"]').click()\n                time.sleep(3)\n                self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Article Title\")]').send_keys(sor[0])\n                self.driver.find_element_by_xpath('//input[contains(@placeholder,\"about\")]').send_keys(sor[1])\n    \n                self.driver.find_element_by_xpath('//textarea[contains(@placeholder,\"Write your\")]').send_keys(sor[2])\n                self.driver.find_element_by_xpath('//input[contains(@placeholder,\"tags\")]').send_keys(sor[3])\n                self.driver.find_element_by_xpath('//button[contains(text(),\"Publish\")]').click()\n                time.sleep(3)\n        time.sleep(5)\n        self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, \"#/@\")]').click()\n        time.sleep(4)\n        #ellenőrizzük, hogy mind a hat blogposzt megjelent-e\n        cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id=\"app\"]//a/h1'))\n>       assert cikkek_szama_iras_utan == cikkek_szama + 6\nE       assert 7 == (12 + 6)\n\ntest_conduit/test_all_conduit.py:174: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 7 == (12 + 6)",
+    "statusTrace" : "self = <test_all_conduit.TestConduit1 object at 0x7f52bfce8a90>\n\n    def test_new_article_from_file(self):\n        conduit_signin(self.driver)\n        time.sleep(2)\n        self.driver.find_element_by_xpath('//*[@class=\"nav navbar-nav pull-xs-right\"]//li[4]/a').click()\n        time.sleep(3)\n        sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id=\"app\"]//a/h1')\n        cikkek_szama = len(sajat_cikk2)\n        time.sleep(2)\n        with open('article.csv', 'r', encoding=\"utf-8\") as csv_in:\n            csv_reader = csv.reader(csv_in, delimiter=',')\n            next(csv_reader)\n            for row in csv_reader:\n                sor = [x.strip(' ') for x in row]\n                self.driver.find_element_by_xpath('//a[@href=\"#/editor\"]').click()\n                time.sleep(3)\n                self.driver.find_element_by_xpath('//input[contains(@placeholder,\"Article Title\")]').send_keys(sor[0])\n                self.driver.find_element_by_xpath('//input[contains(@placeholder,\"about\")]').send_keys(sor[1])\n    \n                self.driver.find_element_by_xpath('//textarea[contains(@placeholder,\"Write your\")]').send_keys(sor[2])\n                self.driver.find_element_by_xpath('//input[contains(@placeholder,\"tags\")]').send_keys(sor[3])\n                self.driver.find_element_by_xpath('//button[contains(text(),\"Publish\")]').click()\n                time.sleep(3)\n        time.sleep(5)\n        self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, \"#/@\")]').click()\n        time.sleep(4)\n        #ellenőrizzük, hogy mind a hat blogposzt megjelent-e\n        cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id=\"app\"]//a/h1'))\n>       assert cikkek_szama_iras_utan == cikkek_szama + 6\nE       assert 7 == (12 + 6)\n\ntest_conduit/test_all_conduit.py:174: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "57c96a4123f5a0fe",
+      "name" : "log",
+      "source" : "57c96a4123f5a0fe.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "7697e3a4178185e9",
+      "name" : "stderr",
+      "source" : "7697e3a4178185e9.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "suite",
+    "value" : "test_all_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit1"
+  }, {
+    "name" : "host",
+    "value" : "fv-az72-672"
+  }, {
+    "name" : "thread",
+    "value" : "3732-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_conduit.test_all_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2e733d7726ca06ec.json",
+  "parameterValues" : [ ]
+}
