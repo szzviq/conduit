@@ -17,6 +17,7 @@ class TestConduit1(object):
         self.driver.quit()
 
     # TC1 ACCEPTING COOKIES
+
     def test_accept_cookies(self):
         self.driver.find_element_by_xpath('//button[contains(@class, "accept")]').click()
         time.sleep(2)
@@ -65,6 +66,7 @@ class TestConduit1(object):
         assert username_value == username
 
     # TC3 SIGNIN
+
     def test_sign_in(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
@@ -80,6 +82,7 @@ class TestConduit1(object):
         assert username_value == username
 
     # TC4 CREATING NEW ARTICLE
+
     def test_new_article(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -100,6 +103,7 @@ class TestConduit1(object):
             False
 
     # TC5 MODIFYING ARTICLE
+
     def test_modify_article(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -132,6 +136,7 @@ class TestConduit1(object):
             False
 
     # TC6 IMPORT DATA FROM FILE
+
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -162,6 +167,7 @@ class TestConduit1(object):
         assert cikkek_szama_iras_utan == cikkek_szama + 6
 
     # TC7 MODIFYING PROFILE
+
     def test_modify_profile(self):
         conduit_signin(self.driver)
         time.sleep(2)
@@ -224,7 +230,7 @@ class TestConduit1(object):
     def test_sampletext_download(self):
         conduit_signin(self.driver)
         blogger_name = "testuser1"
-        time.sleep(4)
+        time.sleep(6)
         my_feed = self.driver.find_element_by_xpath('//a[contains(text(),"Your Feed")]')
         my_feed.click()
         time.sleep(2)
@@ -237,19 +243,20 @@ class TestConduit1(object):
             time.sleep(1)
             post_title = self.driver.find_elements_by_xpath('//a/h1')[i].text
             post_about = self.driver.find_elements_by_xpath('//a/p')[i].text
-            with open('blogposzt2.txt', 'a', encoding='UTF-8') as to_file:
-                to_file.write(f'{post_title};{post_about}; \n')
-                time.sleep(2)
+            with open('blogposzt.txt', 'a', encoding='UTF-8') as to_file:
+                to_file.writelines(f'{post_title} \n{post_about} \n')
+            time.sleep(1)
         # file tartalmának ellenőrzése (az about text egyezésének ellenőrzésével)
-        with open('blogposzt2.txt', 'r', encoding='UTF-8') as from_file:
-            first_line = from_file.readline()
-            text_list = first_line.split(";")
+        with open('blogposzt.txt', 'r', encoding='UTF-8') as from_file:
+            content_list = from_file.readlines()
+            titles_abouts = [line.rstrip(' \n') for line in content_list]
 
+        time.sleep(1)
         self.driver.find_element_by_xpath(f'//a[@href="#/@{blogger_name}/"]').click()
         time.sleep(1)
-        post_about_1 = self.driver.find_elements_by_xpath('//a/p')[0].text
-        time.sleep(3)
-        assert post_about_1 == text_list[1]
+        # print(text_list2[1])
+        assert titles_abouts[1] == self.driver.find_elements_by_xpath('//a/p')[0].text
+        assert titles_abouts[3] == self.driver.find_elements_by_xpath('//a/p')[1].text
         time.sleep(2)
         # testfile törlése
         open("blogposzt2.txt", "w").close()
@@ -304,6 +311,7 @@ class TestConduit1(object):
         assert len(faved_links) == faved
 
     # TC12 LOGOUT
+
     def test_logout(self):
         conduit_signin(self.driver)
         time.sleep(3)
