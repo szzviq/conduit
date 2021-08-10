@@ -243,11 +243,11 @@ class TestConduit1(object):
             time.sleep(1)
             post_title = self.driver.find_elements_by_xpath('//a/h1')[i].text
             post_about = self.driver.find_elements_by_xpath('//a/p')[i].text
-            with open('blogposzt.txt', 'a', encoding='UTF-8') as to_file:
+            with open('blogposzt2.txt', 'a', encoding='UTF-8') as to_file:
                 to_file.writelines(f'{post_title} \n{post_about} \n')
             time.sleep(1)
         # file tartalmának ellenőrzése (az about text egyezésének ellenőrzésével)
-        with open('blogposzt.txt', 'r', encoding='UTF-8') as from_file:
+        with open('blogposzt2.txt', 'r', encoding='UTF-8') as from_file:
             content_list = from_file.readlines()
             titles_abouts = [line.rstrip(' \n') for line in content_list]
 

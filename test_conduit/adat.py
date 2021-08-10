@@ -12,9 +12,9 @@ act_time = now.strftime("%H%M")
 #
 # signup data
 
-mail_1 = "testuser_2@ghail.com"
+mail_1 = "testuser_3@ghail.com"
 # bad_password = 'nemjo'
-username = 'User_new2'
+username = 'User_new3'
 password = 'Valami12'
 
 # data for new article
