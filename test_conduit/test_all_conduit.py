@@ -26,7 +26,7 @@ class TestConduit1(object):
 
 # REGISTRATION
 #02 without data
-
+#
     def test_bad_signup(self):
         self.test_accept_cookies()
 

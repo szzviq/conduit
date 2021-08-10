@@ -11,9 +11,9 @@ now = datetime.now()
 act_time = now.strftime("%H%M")
 # signup data
 
-mail= "testuser_3@ghail.com"
+mail= "testuser_4@ghail.com"
 #bad_password = 'nemjo'
-username = 'User_new3'
+username = 'User_new4'
 password = 'Valami12'
 
 # data for new article
@@ -40,7 +40,7 @@ def conduit_registration(driver):
     driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
     time.sleep(2)
     driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
     driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
     time.sleep(2)
@@ -52,7 +52,7 @@ def conduit_registration(driver):
 
 def conduit_signin(driver):
     driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+    driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
     driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
     time.sleep(2)
     driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
