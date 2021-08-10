@@ -11,8 +11,8 @@ now = datetime.now()
 act_time = now.strftime("%H%M")
 
 # signup data
-mail= "testuser_5@ghail.com"
-username = 'User_new5'
+mail= "testuser_6@ghail.com"
+username = 'User_new6'
 password = 'Valami12'
 
 # data for new article
