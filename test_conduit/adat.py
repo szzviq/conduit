@@ -9,11 +9,10 @@ import csv
 
 now = datetime.now()
 act_time = now.strftime("%H%M")
-#
 # signup data
 
-mail_1 = "testuser_3@ghail.com"
-# bad_password = 'nemjo'
+mail= "testuser_3@ghail.com"
+bad_password = 'nemjo'
 username = 'User_new3'
 password = 'Valami12'
 
@@ -25,8 +24,6 @@ tag = "mese"
 
 # data for profile modification
 pict = 'https://thumbs.dreamstime.com/b/goth-girl-avatar-twin-tails-flat-74541563.jpg'
-# pict2 = "https://static.productionready.io/images/smiley-cyrus.jpg"
-# mod_mail=f'modositva{act_time}@gmail.com'
 mod_username = f'mod_nev{act_time}'
 bio = "Én vagyok a mesebeli okos lány, hoztam is, meg nem is..."
 

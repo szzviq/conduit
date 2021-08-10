@@ -16,7 +16,7 @@ class TestConduit1(object):
     def teardown(self):
         self.driver.quit()
 
-    # TC1 ACCEPTING COOKIES
+# 01 TC02 ACCEPTING COOKIES
 
     def test_accept_cookies(self):
         self.driver.find_element_by_xpath('//button[contains(@class, "accept")]').click()
@@ -24,32 +24,33 @@ class TestConduit1(object):
         after_accept = self.driver.get_cookie("vue-cookie-accept-decline-cookie-policy-panel")
         assert after_accept['value'] == 'accept'
 
-    # #TC2 registration
-    #     #negative with too simple password
-    #     def test_bad_signup(self):
-    #         self.test_accept_cookies()
+# REGISTRATION
+#02 without data
 
-    #         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
-    #         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(bad_password)
-    #         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
-    #         self.driver.implicitly_wait(8)
-    #         # alert_n_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
-    #         alert_n_subtext = self.driver.find_element_by_xpath('//div[@class="swal-text"]')
-    #         print(alert_n_subtext.text)
-    #         reg_fail = "Password must be 8 characters long and include 1 number, 1 uppercase letter, and 1 lowercase letter. "
-    #         time.sleep(3)
-    #         assert alert_n_subtext.text == reg_fail
-    #         self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+    def test_bad_signup(self):
+        self.test_accept_cookies()
 
-    # TC2 REGISTRATION
+        self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
+        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(bad_password)
+        self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
+        time.sleep(2)
+        # alert_n_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
+        alert_n_subtext = self.driver.find_element_by_xpath('//div[@class="swal-text"]')
+        print(alert_n_subtext.text)
+        reg_fail = "Username field required."
+        time.sleep(3)
+        assert alert_n_subtext.text == reg_fail
+        self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
+#03 -TC03
+#registration with valid data
     def test_signup(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         self.driver.implicitly_wait(8)
@@ -65,11 +66,11 @@ class TestConduit1(object):
         username_value = self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').text
         assert username_value == username
 
-    # TC3 SIGNIN
+#04 -  SIGNIN
 
     def test_sign_in(self):
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign in")]').click()
-        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail_1)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(password)
 
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
@@ -81,7 +82,7 @@ class TestConduit1(object):
         username_value = self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').text
         assert username_value == username
 
-    # TC4 CREATING NEW ARTICLE
+#05 - CREATING NEW ARTICLE
 
     def test_new_article(self):
         conduit_signin(self.driver)
@@ -102,7 +103,7 @@ class TestConduit1(object):
         else:
             False
 
-    # TC5 MODIFYING ARTICLE
+# 06 - MODIFYING ARTICLE
 
     def test_modify_article(self):
         conduit_signin(self.driver)
@@ -112,9 +113,10 @@ class TestConduit1(object):
         sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         sajat_cikk[0].click()
         time.sleep(3)
+        #módosítás megnyitása
         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
         edit.click()
-        self.driver.implicitly_wait(2)
+        time.sleep(1)
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').clear()
         self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(title_mod)
 
@@ -129,13 +131,14 @@ class TestConduit1(object):
         self.driver.implicitly_wait(4)
         self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
         time.sleep(4)
+        #módosított szöveg ellenőrzése
         if self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]').is_displayed():
             szoveg_down2 = self.driver.find_element_by_xpath('//div[@class="col-xs-12"]//div//p')
             assert write_mod == szoveg_down2.text
         else:
             False
 
-    # TC6 IMPORT DATA FROM FILE
+#07  IMPORT DATA FROM FILE
 
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
@@ -144,7 +147,7 @@ class TestConduit1(object):
         time.sleep(3)
         sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         cikkek_szama = len(sajat_cikk2)
-        self.driver.implicitly_wait(4)
+        time.sleep(2)
         with open('article.csv', 'r', encoding="utf-8") as csv_in:
             csv_reader = csv.reader(csv_in, delimiter=',')
             next(csv_reader)
@@ -163,10 +166,11 @@ class TestConduit1(object):
         time.sleep(5)
         self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
         time.sleep(4)
+        #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
         cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert cikkek_szama_iras_utan == cikkek_szama + 6
 
-    # TC7 MODIFYING PROFILE
+#08 - MODIFYING PROFILE
 
     def test_modify_profile(self):
         conduit_signin(self.driver)
@@ -205,7 +209,7 @@ class TestConduit1(object):
         # self.driver.implicitly_wait(2)
         # self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
-    # TC8 DELETING ARTICLES
+#09 - DELETING ARTICLES
 
     def test_delete_article(self):
         conduit_signin(self.driver)
@@ -216,6 +220,7 @@ class TestConduit1(object):
         time.sleep(3)
         sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         torles_elott = len(sajat_cikk)
+        #a listában utolsó saját cikk törlése
         sajat_cikk[-1].click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
@@ -225,7 +230,7 @@ class TestConduit1(object):
         torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
         assert torles_elott != torles_utan
 
-    # TC9 SAVING DATA
+#10 - SAVING DATA
 
     def test_sampletext_download(self):
         conduit_signin(self.driver)
@@ -261,7 +266,7 @@ class TestConduit1(object):
         # testfile törlése
         open("blogposzt2.txt", "w").close()
 
-    # TC10 PAGINATION
+#11 PAGINATION
 
     def test_pagination(self):
         conduit_signin(self.driver)
@@ -276,7 +281,7 @@ class TestConduit1(object):
             continue
         assert len(lapozo_oldalak) == int(last_number)
 
-    # T11 LIST FAVOURITED POSTS
+#12 LIST FAVOURITED POSTS
 
     def test_list_faved_posts(self):
         conduit_signin(self.driver)
@@ -310,7 +315,7 @@ class TestConduit1(object):
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
         assert len(faved_links) == faved
 
-    # TC12 LOGOUT
+#13 LOGOUT
 
     def test_logout(self):
         conduit_signin(self.driver)
