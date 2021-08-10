@@ -111,7 +111,7 @@ class TestConduit1(object):
         time.sleep(2)
         sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         sajat_cikk[0].click()
-        self.driver.implicitly_wait(4)
+        time.sleep(3)
         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
         edit.click()
         self.driver.implicitly_wait(2)
