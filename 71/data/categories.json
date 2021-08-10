@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 7 == (12 + 6)",
+      "children" : [ {
+        "name" : "test_new_article_from_file",
+        "uid" : "ba08ef076a9a6f1d",
+        "parentUid" : "a510dfff4f8cc7f4a7348596f48798cb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628618994655,
+          "stop" : 1628619051727,
+          "duration" : 57072
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a510dfff4f8cc7f4a7348596f48798cb"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'TestConduit1' object has no attribute 'browser'",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "eeccc1cc7f4b0050",
+        "parentUid" : "9d0f8dc45f1c9746c882e31e959c0be0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628619130350,
+          "stop" : 1628619140915,
+          "duration" : 10565
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9d0f8dc45f1c9746c882e31e959c0be0"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

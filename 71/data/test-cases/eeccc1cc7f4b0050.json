@@ -1,0 +1,86 @@
+{
+  "uid" : "eeccc1cc7f4b0050",
+  "name" : "test_list_faved_posts",
+  "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_list_faved_posts",
+  "historyId" : "ede4d5f6b64765c03a46fe4773e044d1",
+  "time" : {
+    "start" : 1628619130350,
+    "stop" : 1628619140915,
+    "duration" : 10565
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'TestConduit1' object has no attribute 'browser'",
+  "statusTrace" : "self = <test_all_conduit.TestConduit1 object at 0x7f11ba2b3c70>\n\n    def test_list_faved_posts(self):\n        global failed_ones\n        conduit_signin(self.driver)\n        time.sleep(4)\n        fav_buttons = self.driver.find_elements_by_xpath('//div[@class=\"article-preview\"]//button/i')\n        counter = 0\n        faved = 0\n        # az első 10 blogposzt likeolása ellenőrzéssel\n        for fav in fav_buttons[0:10]:\n            fav.click()\n            time.sleep(1)\n            number_of_likes = self.driver.find_elements_by_xpath('//div[@class=\"article-preview\"]//button/span')[\n                counter]\n            if int(number_of_likes.text) > 0:\n                faved += 1\n            else:\n                # ha a klikkelés ellenére a likeok száma nulla marad az adott blogpsztnál:\n>               allure.attach(self.browser.get_screenshot_as_png(), name=\"Passwordfailure\",attachment_type=AttachmentType.PNG)\nE               AttributeError: 'TestConduit1' object has no attribute 'browser'\n\ntest_conduit/test_all_conduit.py:304: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'TestConduit1' object has no attribute 'browser'",
+    "statusTrace" : "self = <test_all_conduit.TestConduit1 object at 0x7f11ba2b3c70>\n\n    def test_list_faved_posts(self):\n        global failed_ones\n        conduit_signin(self.driver)\n        time.sleep(4)\n        fav_buttons = self.driver.find_elements_by_xpath('//div[@class=\"article-preview\"]//button/i')\n        counter = 0\n        faved = 0\n        # az első 10 blogposzt likeolása ellenőrzéssel\n        for fav in fav_buttons[0:10]:\n            fav.click()\n            time.sleep(1)\n            number_of_likes = self.driver.find_elements_by_xpath('//div[@class=\"article-preview\"]//button/span')[\n                counter]\n            if int(number_of_likes.text) > 0:\n                faved += 1\n            else:\n                # ha a klikkelés ellenére a likeok száma nulla marad az adott blogpsztnál:\n>               allure.attach(self.browser.get_screenshot_as_png(), name=\"Passwordfailure\",attachment_type=AttachmentType.PNG)\nE               AttributeError: 'TestConduit1' object has no attribute 'browser'\n\ntest_conduit/test_all_conduit.py:304: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2a167baf6cb8237b",
+      "name" : "log",
+      "source" : "2a167baf6cb8237b.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "de7f361746bd1014",
+      "name" : "stderr",
+      "source" : "de7f361746bd1014.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "suite",
+    "value" : "test_all_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit1"
+  }, {
+    "name" : "host",
+    "value" : "fv-az72-672"
+  }, {
+    "name" : "thread",
+    "value" : "3729-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_conduit.test_all_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "eeccc1cc7f4b0050.json",
+  "parameterValues" : [ ]
+}
