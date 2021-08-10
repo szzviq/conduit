@@ -201,7 +201,7 @@ class TestConduit1(object):
         assert motto == bio
         assert img == pict
         self.driver.find_element_by_xpath('//a[contains(@class ,"btn-outline-secondary")]').click()
-        time.sleep(5)
+        time.sleep(3)
         # Visszaallitas
         # self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
         # self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict2)
