@@ -61,7 +61,6 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         self.driver.implicitly_wait(8)
         alert_text = self.driver.find_element_by_xpath('//div[@class="swal-title"]')
-        print(alert_text)
         success = "Welcome!"
         time.sleep(4)
         assert alert_text.text == success
@@ -160,7 +159,6 @@ class TestConduit1(object):
             next(csv_reader)
             for row in csv_reader:
                 sor = [x.strip(' ') for x in row]
-                print(row)
                 self.driver.find_element_by_xpath('//a[@href="#/editor"]').click()
                 time.sleep(3)
                 self.driver.find_element_by_xpath('//input[contains(@placeholder,"Article Title")]').send_keys(sor[0])
@@ -250,7 +248,6 @@ class TestConduit1(object):
         time.sleep(3)
         # a user posztjainak fileba írása
         posztok = self.driver.find_elements_by_xpath('//a/h1')
-        print(self.driver.find_elements_by_xpath('//a/p')[0].text)
         for i in range(len(posztok)):
             time.sleep(1)
             post_title = self.driver.find_elements_by_xpath('//a/h1')[i].text
@@ -290,6 +287,7 @@ class TestConduit1(object):
 #13 LIST FAVOURITED POSTS
 
     def test_list_faved_posts(self):
+        global failed_ones
         conduit_signin(self.driver)
         time.sleep(4)
         fav_buttons = self.driver.find_elements_by_xpath('//div[@class="article-preview"]//button/i')
@@ -320,6 +318,7 @@ class TestConduit1(object):
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
         assert len(faved_links) == faved
+        assert len(failed_ones) == 0, f"Test Failed: An error occured during liking {len(failed_ones)} article."
 
 #14 LOGOUT
 
