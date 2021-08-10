@@ -301,7 +301,7 @@ class TestConduit1(object):
                 faved += 1
             else:
                 # ha a klikkelés ellenére a likeok száma nulla marad az adott blogpsztnál:
-                allure.attach(self.browser.get_screenshot_as_png(), name="Passwordfailure",attachment_type=AttachmentType.PNG)
+                allure.attach(self.driver.get_screenshot_as_png(), name="Passwordfailure",attachment_type=AttachmentType.PNG)
                 failed_ones = []
                 failed_ones.append(counter)
                 for i in failed_ones:
@@ -316,7 +316,9 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
+        # ellenőrizzük, hogy minden olyan bejegyzés, amelynél növekedett a likeok száma megjelent-e a Favorites aloldalon
         assert len(faved_links) == faved
+        # ellenőrizzük, hogy nincs olyan bejegyzés, ahol nullán maradt a like számláló
         assert len(failed_ones) == 0, f"Test Failed: An error occured during liking {len(failed_ones)} article."
 
 #14 LOGOUT
