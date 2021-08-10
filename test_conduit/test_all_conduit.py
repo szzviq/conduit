@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
-import time
+from allure_commons.types import AttachmentType
+import allure
 from adat import *
 
 
@@ -37,9 +38,6 @@ class TestConduit1(object):
         self.test_accept_cookies()
 
         self.driver.find_element_by_xpath('//a[contains(text(),"Sign up")]').click()
-        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Username")]').send_keys(username)
-        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Email")]').send_keys(mail)
-        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"Password")]').send_keys(bad_password)
         self.driver.find_element_by_xpath('//button[contains(@class,"pull-xs")]').click()
         time.sleep(2)
         alert_n_subtext = self.driver.find_element_by_xpath('//div[@class="swal-text"]')
@@ -302,7 +300,8 @@ class TestConduit1(object):
             if int(number_of_likes.text) > 0:
                 faved += 1
             else:
-                # a hibás blogposzt jelölése
+                # ha a klikkelés ellenére a likeok száma nulla marad az adott blogpsztnál:
+                allure.attach(self.browser.get_screenshot_as_png(), name="Passwordfailure",attachment_type=AttachmentType.PNG)
                 failed_ones = []
                 failed_ones.append(counter)
                 for i in failed_ones:
