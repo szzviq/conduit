@@ -20,7 +20,7 @@ class TestConduit1(object):
 
     def test_homepage(self):
         time.sleep(2)
-        assert self.browser.find_element_by_xpath('//h1[@class="logo-font"]').text == "conduit"
+        assert self.driver.find_element_by_xpath('//h1[@class="logo-font"]').text == "conduit"
 
 #02 TC02 ACCEPTING COOKIES
 
