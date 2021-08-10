@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 7 == (12 + 6)",
+      "children" : [ {
+        "name" : "test_new_article_from_file",
+        "uid" : "59ef47a98b4d27fa",
+        "parentUid" : "a510dfff4f8cc7f4a7348596f48798cb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628619570064,
+          "stop" : 1628619626583,
+          "duration" : 56519
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a510dfff4f8cc7f4a7348596f48798cb"
+    }, {
+      "name" : "AssertionError: Test Failed: An error occured during liking 1 article.\nassert 1 == 0\n +  where 1 = len([3])",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "15e1858e055b51f5",
+        "parentUid" : "df740419dc8d4996dec400570997e726",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628619731856,
+          "stop" : 1628619759848,
+          "duration" : 27992
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "df740419dc8d4996dec400570997e726"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
