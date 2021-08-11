@@ -263,9 +263,7 @@ class TestConduit1(object):
         time.sleep(1)
         assert titles_abouts[1] == self.driver.find_elements_by_xpath('//a/p')[0].text
         assert titles_abouts[3] == self.driver.find_elements_by_xpath('//a/p')[1].text
-        time.sleep(2)
-        # testfile tartalmának törlése
-        open("blogposzt2.txt", "w").close()
+        time.sleep(1)
 
 #12 PAGINATION
 
