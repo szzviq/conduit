@@ -203,14 +203,14 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//a[contains(@class ,"btn-outline-secondary")]').click()
         time.sleep(3)
         # Visszaallitas
-        # self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
-        # self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict2)
-        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').clear()
-        # self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').send_keys(username)
-        # self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
-        # self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
-        # self.driver.implicitly_wait(2)
-        # self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
+        self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').clear()
+        self.driver.find_element_by_xpath('//input[@placeholder="URL of profile picture"]').send_keys(pict2)
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').clear()
+        self.driver.find_element_by_xpath('//input[contains(@placeholder,"username")]').send_keys(username)
+        self.driver.find_element_by_xpath('//textarea[contains(@placeholder,"bio")]').clear()
+        self.driver.find_element_by_xpath('//button[contains(text(),"Update")]').click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath('//button[@class="swal-button swal-button--confirm"]').click()
 
 #10 - DELETING ARTICLES
 
