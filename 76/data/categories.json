@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Expected: 10 found: 9.\nassert 9 == 10\n +  where 9 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"1918a258185d1ce91dea076c7843f2c5\", element=\"a9948e15-0b06-...belement.WebElement (session=\"1918a258185d1ce91dea076c7843f2c5\", element=\"563048f3-d8e1-4a09-8381-b02a84b998d1\")>, ...])",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "399cfdb6dbba6243",
+        "parentUid" : "b054fd17d244f8e79ffd89c31f5c6598",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628803038464,
+          "stop" : 1628803066604,
+          "duration" : 28140
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b054fd17d244f8e79ffd89c31f5c6598"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
