@@ -314,11 +314,12 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//a[contains(text(), "Favorited")]').click()
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
+        # ellenőrizzük, hogy minden kedvencnek jelölt bejegyzés megjelenik-e a Favorites oldalon
+        assert len(faved_links) == 10, f"Expected: 10 found: {10 - len(failed_ones)}."
         # ellenőrizzük, hogy minden olyan bejegyzés, amelynél növekedett a likeok száma megjelent-e a Favorites aloldalon
         assert len(faved_links) == faved
         # ellenőrizzük, hogy nincs olyan bejegyzés, ahol nullán maradt a like számláló
-        assert len(failed_ones) == 0, f"Test Failed: An error occured during liking {len(failed_ones)} article. Expected 10 found {10 - len(failed_ones)}."
-
+        assert len(failed_ones) == 0, f"Test Failed: An error occured during liking {len(failed_ones)} article."
 #14 LOGOUT
 
     def test_logout(self):
