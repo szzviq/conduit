@@ -317,7 +317,7 @@ class TestConduit1(object):
         # ellenőrizzük, hogy minden olyan bejegyzés, amelynél növekedett a likeok száma megjelent-e a Favorites aloldalon
         assert len(faved_links) == faved
         # ellenőrizzük, hogy nincs olyan bejegyzés, ahol nullán maradt a like számláló
-        assert len(failed_ones) == 0, f"Test Failed: An error occured during liking {len(failed_ones)} article."
+        assert len(failed_ones) == 0, f"Test Failed: An error occured during liking {len(failed_ones)} article. Expected 10 found {10 - len(failed_ones)}."
 
 #14 LOGOUT
 
