@@ -3,10 +3,10 @@
   "reportUrl" : "https://szzviq.github.io/conduit/78/",
   "reportName" : "Allure Report with history",
   "data" : {
-    "failed" : 2,
+    "failed" : 1,
     "broken" : 0,
     "skipped" : 0,
-    "passed" : 12,
+    "passed" : 13,
     "unknown" : 0,
     "total" : 14
   }
