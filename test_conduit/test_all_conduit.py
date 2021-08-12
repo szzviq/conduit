@@ -299,7 +299,7 @@ class TestConduit1(object):
                 faved += 1
             else:
                 # ha a klikkelés ellenére a likeok száma nulla marad az adott blogpsztnál:
-                allure.attach(self.driver.get_screenshot_as_png(), name="Passwordfailure",attachment_type=AttachmentType.PNG)
+                allure.attach(self.driver.get_screenshot_as_png(), name="Likes",attachment_type=AttachmentType.PNG)
                 failed_ones = []
                 failed_ones.append(counter)
                 for i in failed_ones:
