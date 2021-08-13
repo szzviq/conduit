@@ -151,6 +151,7 @@ class TestConduit1(object):
         time.sleep(4)
         my_articles2 = self.driver.find_elements_by_xpath('//a[@href="#/@{username}/"]//parent::div//following-sibling::a/h1')
         number_of_articles = len(my_articles2)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Mivanitt", attachment_type=AttachmentType.PNG)
         time.sleep(2)
         with open('article.csv', 'r', encoding="utf-8") as csv_in:
             csv_reader = csv.reader(csv_in, delimiter=',')
@@ -172,6 +173,8 @@ class TestConduit1(object):
         time.sleep(4)
         #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
         articles_after_writing = len(self.driver.find_elements_by_xpath(f'//a[@href="#/@{username}/"]//parent::div//following-sibling::a/h1'))
+        allure.attach(self.driver.get_screenshot_as_png(), name="Esitt", attachment_type=AttachmentType.PNG)
+        time.sleep(2)
         assert articles_after_writing == number_of_articles + 6
 
 #09 - MODIFYING PROFILE
