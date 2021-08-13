@@ -149,7 +149,7 @@ class TestConduit1(object):
         time.sleep(2)
         self.driver.get(f"http://localhost:1667/#/@{username}/")
         time.sleep(4)
-        my_articles2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        my_articles2 = self.driver.find_elements_by_xpath('//a[@href="#/@{username}/"]//parent::div//following-sibling::a/h1')
         number_of_articles = len(my_articles2)
         time.sleep(2)
         with open('article.csv', 'r', encoding="utf-8") as csv_in:
@@ -171,7 +171,7 @@ class TestConduit1(object):
         #self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
         time.sleep(4)
         #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
-        articles_after_writing = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
+        articles_after_writing = len(self.driver.find_elements_by_xpath(f'//a[@href="#/@{username}/"]//parent::div//following-sibling::a/h1'))
         assert articles_after_writing == number_of_articles + 6
 
 #09 - MODIFYING PROFILE
@@ -321,7 +321,7 @@ class TestConduit1(object):
         # ellenőrizzük, hogy minden olyan bejegyzés, amelynél növekedett a likeok száma megjelent-e a Favorites aloldalon
         assert len(faved_links) == faved
         # ellenőrizzük, hogy hány olyan bejegyzés van, ahol nullán maradt a like számláló
-        assert len(failed_ones) != 0, f"Test Failed: An error occured during liking {len(failed_ones)} article."
+        assert len(failed_ones) != 0
 #14 LOGOUT
 
     def test_logout(self):
