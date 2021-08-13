@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 7 == (12 + 6)",
+      "children" : [ {
+        "name" : "test_new_article_from_file",
+        "uid" : "d777aca2e2d86c37",
+        "parentUid" : "a510dfff4f8cc7f4a7348596f48798cb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628841474993,
+          "stop" : 1628841531421,
+          "duration" : 56428
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a510dfff4f8cc7f4a7348596f48798cb"
+    }, {
+      "name" : "AssertionError: Expected: 10 found: 9.\nassert 9 == 10\n +  where 9 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"ed034ce32b64992661b47b2daec1a21b\", element=\"de03d900-73e7-...belement.WebElement (session=\"ed034ce32b64992661b47b2daec1a21b\", element=\"948d507f-58d0-4809-a00b-c65c9e780365\")>, ...])",
+      "children" : [ {
+        "name" : "test_list_faved_posts",
+        "uid" : "6496f571e7d23f60",
+        "parentUid" : "780aa43fdd4234b749e4e70b1cb48f3a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628841610920,
+          "stop" : 1628841638877,
+          "duration" : 27957
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "780aa43fdd4234b749e4e70b1cb48f3a"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
