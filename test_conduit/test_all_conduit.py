@@ -147,11 +147,11 @@ class TestConduit1(object):
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
         time.sleep(2)
-        self.driver.get(f"http://localhost:1667/#/@{username}/")
-        time.sleep(4)
+        # self.driver.get(f"http://localhost:1667/#/@{username}/")
+        # time.sleep(4)
         my_articles2 = self.driver.find_elements_by_xpath('//a[@href="#/@{username}/"]//parent::div//following-sibling::a/h1')
         number_of_articles = len(my_articles2)
-        allure.attach(self.driver.get_screenshot_as_png(), name="Mivanitt", attachment_type=AttachmentType.PNG)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Before", attachment_type=AttachmentType.PNG)
         time.sleep(2)
         with open('article.csv', 'r', encoding="utf-8") as csv_in:
             csv_reader = csv.reader(csv_in, delimiter=',')
@@ -168,12 +168,12 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
         time.sleep(5)
-        self.driver.get(f"http://localhost:1667/#/@{username}/")
         #self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
-        time.sleep(4)
+        self.driver.find_element_by_xpath('//nav/div/ul/li/a[@href="#/"]').click()
+        time.sleep(2)
         #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
         articles_after_writing = len(self.driver.find_elements_by_xpath(f'//a[@href="#/@{username}/"]//parent::div//following-sibling::a/h1'))
-        allure.attach(self.driver.get_screenshot_as_png(), name="Esitt", attachment_type=AttachmentType.PNG)
+        allure.attach(self.driver.get_screenshot_as_png(), name="After", attachment_type=AttachmentType.PNG)
         time.sleep(2)
         assert articles_after_writing == number_of_articles + 6
 
