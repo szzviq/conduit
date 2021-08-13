@@ -114,9 +114,9 @@ class TestConduit1(object):
         time.sleep(3)
         self.driver.find_element_by_xpath('//li/a[contains(@href, "#/@")]').click()
         time.sleep(2)
-        sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-        sajat_cikk[0].click()
-        time.sleep(3)
+        my_article = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        my_article[0].click()
+        time.sleep(4)
         #módosítás megnyitása
         edit = self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]')
         edit.click()
@@ -137,8 +137,8 @@ class TestConduit1(object):
         time.sleep(4)
         #módosított szöveg ellenőrzése
         if self.driver.find_element_by_xpath('//span[contains(text(),"Edit")]').is_displayed():
-            szoveg_down2 = self.driver.find_element_by_xpath('//div[@class="col-xs-12"]//div//p')
-            assert write_mod == szoveg_down2.text
+            text_down2 = self.driver.find_element_by_xpath('//div[@class="col-xs-12"]//div//p')
+            assert write_mod == text_down2.text
         else:
             False
 
@@ -149,8 +149,8 @@ class TestConduit1(object):
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(3)
-        sajat_cikk2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-        cikkek_szama = len(sajat_cikk2)
+        my_articles2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        number_of_articles = len(my_articles2)
         time.sleep(2)
         with open('article.csv', 'r', encoding="utf-8") as csv_in:
             csv_reader = csv.reader(csv_in, delimiter=',')
@@ -170,8 +170,8 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
         time.sleep(4)
         #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
-        cikkek_szama_iras_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
-        assert cikkek_szama_iras_utan == cikkek_szama + 6
+        articles_after_writing = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
+        assert articles_after_writing == number_of_articles + 6
 
 #09 - MODIFYING PROFILE
 
@@ -221,17 +221,17 @@ class TestConduit1(object):
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(3)
-        sajat_cikk = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
-        torles_elott = len(sajat_cikk)
+        my_articles = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
+        before_del = len(my_articles)
         #a listában utolsó saját cikk törlése
-        sajat_cikk[-1].click()
+        my_articles[-1].click()
         self.driver.implicitly_wait(2)
         self.driver.find_element_by_xpath('//button[@class="btn btn-outline-danger btn-sm"]').click()
         time.sleep(2)
         self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
         time.sleep(3)
-        torles_utan = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
-        assert torles_elott != torles_utan
+        after_del = len(self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1'))
+        assert before_del != after_del
 
 #11 - SAVING DATA
 
@@ -245,8 +245,8 @@ class TestConduit1(object):
         self.driver.find_element_by_xpath(f'//a[@href="#/@{blogger_name}/"]').click()
         time.sleep(3)
         # a user posztjainak fileba írása
-        posztok = self.driver.find_elements_by_xpath('//a/h1')
-        for i in range(len(posztok)):
+        posts = self.driver.find_elements_by_xpath('//a/h1')
+        for i in range(len(posts)):
             time.sleep(1)
             post_title = self.driver.find_elements_by_xpath('//a/h1')[i].text
             post_about = self.driver.find_elements_by_xpath('//a/p')[i].text
@@ -270,15 +270,15 @@ class TestConduit1(object):
     def test_pagination(self):
         conduit_signin(self.driver)
         time.sleep(2)
-        lapozo_oldalak = self.driver.find_elements_by_xpath('//ul[@class="pagination"]/li/a')
-        last_number = lapozo_oldalak[-1].text
+        pages = self.driver.find_elements_by_xpath('//ul[@class="pagination"]/li/a')
+        last_number = pages[-1].text
         # A lapozóoldalak számának ellenőrzése, amennyiben az nagyobb, mint 0
-        assert (len(lapozo_oldalak) > 0)
-        for oldal in lapozo_oldalak:
+        assert (len(pages) > 0)
+        for oldal in pages:
             oldal.click()
             time.sleep(3)
             continue
-        assert len(lapozo_oldalak) == int(last_number)
+        assert len(pages) == int(last_number)
 
 #13 LIST FAVOURITED POSTS
 
