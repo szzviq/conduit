@@ -146,9 +146,9 @@ class TestConduit1(object):
 
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
-        time.sleep(3)
-        self.driver.find_element_by_xpath('//*[@class="nav navbar-nav pull-xs-right"]//li[4]/a').click()
-        time.sleep(3)
+        time.sleep(2)
+        self.driver.get(f"http://localhost:1667/#/@{username}/")
+        time.sleep(4)
         my_articles2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         number_of_articles = len(my_articles2)
         time.sleep(2)
@@ -167,7 +167,7 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
         time.sleep(5)
-        self.driver.get(f"http://localhost:1667/#/@{username}/").click()
+        self.driver.get(f"http://localhost:1667/#/@{username}/")
         #self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
         time.sleep(4)
         #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
@@ -316,7 +316,8 @@ class TestConduit1(object):
         time.sleep(3)
         faved_links = self.driver.find_elements_by_xpath('//a/h1')
         # ellenőrizzük, hogy nem minden kedvencnek jelölt bejegyzés jelenik meg a Favorites oldalon
-        assert len(faved_links) != 10, f"Expected: 10 found: {len(faved_links)}."
+        assert len(faved_links) != 10
+        print(f"Expected: 10 found: {len(faved_links)}.")
         # ellenőrizzük, hogy minden olyan bejegyzés, amelynél növekedett a likeok száma megjelent-e a Favorites aloldalon
         assert len(faved_links) == faved
         # ellenőrizzük, hogy hány olyan bejegyzés van, ahol nullán maradt a like számláló
