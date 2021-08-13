@@ -1,0 +1,90 @@
+{
+  "uid" : "95a3e2507d193362",
+  "name" : "test_list_faved_posts",
+  "fullName" : "test_conduit.test_all_conduit.TestConduit1#test_list_faved_posts",
+  "historyId" : "ede4d5f6b64765c03a46fe4773e044d1",
+  "time" : {
+    "start" : 1628850132798,
+    "stop" : 1628850160726,
+    "duration" : 27928
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "70bcbd40f84afbdc",
+      "name" : "Likes",
+      "source" : "70bcbd40f84afbdc.png",
+      "type" : "image/png",
+      "size" : 43085
+    }, {
+      "uid" : "96c0ff7e649cf441",
+      "name" : "log",
+      "source" : "96c0ff7e649cf441.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "c4338a9651c2f102",
+      "name" : "stdout",
+      "source" : "c4338a9651c2f102.txt",
+      "type" : "text/plain",
+      "size" : 118
+    }, {
+      "uid" : "755d857c6085a17a",
+      "name" : "stderr",
+      "source" : "755d857c6085a17a.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "suite",
+    "value" : "test_all_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit1"
+  }, {
+    "name" : "host",
+    "value" : "fv-az72-270"
+  }, {
+    "name" : "thread",
+    "value" : "3672-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_conduit.test_all_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "95a3e2507d193362.json",
+  "parameterValues" : [ ]
+}
