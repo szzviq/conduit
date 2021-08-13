@@ -147,8 +147,6 @@ class TestConduit1(object):
     def test_new_article_from_file(self):
         conduit_signin(self.driver)
         time.sleep(4)
-        # self.driver.get(f"http://localhost:1667/#/@{username}/")
-        # time.sleep(4)
         articles2 = self.driver.find_elements_by_xpath('//*[@id="app"]//a/h1')
         number_of_articles = len(articles2)
         time.sleep(2)
@@ -167,7 +165,6 @@ class TestConduit1(object):
                 self.driver.find_element_by_xpath('//button[contains(text(),"Publish")]').click()
                 time.sleep(3)
         time.sleep(5)
-        #self.driver.find_element_by_xpath('//nav/div/ul/li/a[starts-with(@href, "#/@")]').click()
         self.driver.find_element_by_xpath('//nav/div/ul/li/a[@href="#/"]').click()
         time.sleep(2)
         #ellenőrizzük, hogy mind a hat blogposzt megjelent-e
