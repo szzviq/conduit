@@ -1,9 +1,0 @@
-[ {
-  "buildOrder" : 90,
-  "reportUrl" : "https://szzviq.github.io/conduit/90/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 0,
-    "retry" : 0
-  }
-} ]
